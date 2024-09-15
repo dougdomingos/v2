@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Douglas Silva - Computer Science</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Douglas Silva - Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;img src=&#34;https://avatars.githubusercontent.com/u/95258393?v=4&#34;  alt=&#34;Profile Pic&#34;  class=&#34;center&#34;  style=&#34;border-radius: 999px; max-width: 250px;&#34;    /&gt;
+
+
+&lt;p&gt;My name is Douglas Silva. I&amp;rsquo;m a Computer Science undergraduate at Federal University of
+Campina Grande (UFCG), and currently working as IT Support and DevOps at Guardians UFCG.&lt;/p&gt;
+&lt;p&gt;I began my adventures in the world of programming in 2019, learning Python using only
+my phone and watching free online courses from the YouTube channel
+&amp;ldquo;&lt;a href=&#34;https://youtube.com/c/CursoEmVideo&#34;&gt;Curso em Vídeo&lt;/a&gt;&amp;rdquo; by professor Gustavo Guanabara.
+My inital goal was to learn how to make games, but there are so many possibilities
+in this vast world that I simply like to code, no matter the purpose.&lt;/p&gt;</description>
+      <content>
+&lt;img src=&#34;https://avatars.githubusercontent.com/u/95258393?v=4&#34;  alt=&#34;Profile Pic&#34;  class=&#34;center&#34;  style=&#34;border-radius: 999px; max-width: 250px;&#34;    /&gt;
+
+
+&lt;p&gt;My name is Douglas Silva. I&amp;rsquo;m a Computer Science undergraduate at Federal University of
+Campina Grande (UFCG), and currently working as IT Support and DevOps at Guardians UFCG.&lt;/p&gt;
+&lt;p&gt;I began my adventures in the world of programming in 2019, learning Python using only
+my phone and watching free online courses from the YouTube channel
+&amp;ldquo;&lt;a href=&#34;https://youtube.com/c/CursoEmVideo&#34;&gt;Curso em Vídeo&lt;/a&gt;&amp;rdquo; by professor Gustavo Guanabara.
+My inital goal was to learn how to make games, but there are so many possibilities
+in this vast world that I simply like to code, no matter the purpose.&lt;/p&gt;
+&lt;p&gt;Currently, this are the techonologies I have experience with (or have interest of
+learning at some point):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Frontend development with &lt;code&gt;React&lt;/code&gt; and &lt;code&gt;NextJS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Backend development with &lt;code&gt;Java&lt;/code&gt; and &lt;code&gt;Spring Boot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;System Administration with Linux&lt;/li&gt;
+&lt;li&gt;Game development&lt;/li&gt;
+&lt;li&gt;Research and development&lt;/li&gt;
+&lt;li&gt;Cybersecurity and Ethical Hacking&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;p&gt;Here are some of my projects. I plan to expand this list a lot in the future:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dougdomingos/expense-tracker&#34;&gt;Expense Tracker&lt;/a&gt;: &lt;strong&gt;REST API&lt;/strong&gt; built with
+&lt;strong&gt;Spring Boot&lt;/strong&gt;, &lt;strong&gt;JWT Authentication&lt;/strong&gt; and &lt;strong&gt;H2 Database&lt;/strong&gt; for managing finances with ease&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dougdomingos/DSA-Java&#34;&gt;DSA-Java&lt;/a&gt;: &lt;strong&gt;Data Structures&lt;/strong&gt; and
+&lt;strong&gt;Sorting Algorithms&lt;/strong&gt; implemented with &lt;strong&gt;Java&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dougdomingos/portfolio-v1&#34;&gt;portfolio-v1&lt;/a&gt;: The &lt;strong&gt;first iteration&lt;/strong&gt; of
+this website, made with &lt;strong&gt;NextJS 14&lt;/strong&gt; and &lt;strong&gt;ContentLayer&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dougdomingos/HashDictionary&#34;&gt;HashDictionary&lt;/a&gt;: A college project for
+evaluating different &lt;strong&gt;hash functions&lt;/strong&gt;&lt;/p&gt;</description>
+      <content>&lt;p&gt;Here are some of my projects. I plan to expand this list a lot in the future:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dougdomingos/expense-tracker&#34;&gt;Expense Tracker&lt;/a&gt;: &lt;strong&gt;REST API&lt;/strong&gt; built with
+&lt;strong&gt;Spring Boot&lt;/strong&gt;, &lt;strong&gt;JWT Authentication&lt;/strong&gt; and &lt;strong&gt;H2 Database&lt;/strong&gt; for managing finances with ease&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dougdomingos/DSA-Java&#34;&gt;DSA-Java&lt;/a&gt;: &lt;strong&gt;Data Structures&lt;/strong&gt; and
+&lt;strong&gt;Sorting Algorithms&lt;/strong&gt; implemented with &lt;strong&gt;Java&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dougdomingos/portfolio-v1&#34;&gt;portfolio-v1&lt;/a&gt;: The &lt;strong&gt;first iteration&lt;/strong&gt; of
+this website, made with &lt;strong&gt;NextJS 14&lt;/strong&gt; and &lt;strong&gt;ContentLayer&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dougdomingos/HashDictionary&#34;&gt;HashDictionary&lt;/a&gt;: A college project for
+evaluating different &lt;strong&gt;hash functions&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

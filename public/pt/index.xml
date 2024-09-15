@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pts on Douglas Silva - Computer Science</title>
+    <link>http://localhost:1313/pt/</link>
+    <description>Recent content in Pts on Douglas Silva - Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="http://localhost:1313/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre mim</title>
+      <link>http://localhost:1313/pt/sobre-mim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/pt/sobre-mim/</guid>
+      <description>&lt;img src=&#34;https://avatars.githubusercontent.com/u/95258393?v=4&#34;  alt=&#34;Profile Pic&#34;  class=&#34;center&#34;  style=&#34;border-radius: 999px; max-width: 250px;&#34;    /&gt;
+
+
+&lt;p&gt;Meu nome é Douglas Silva. Sou graduando em Ciência da Computação pela Universidade Federal de
+Campina Grande (UFCG), e atualmente atuo como suporte de TI e DevOps pelo Guardians UFCG.&lt;/p&gt;
+&lt;p&gt;Iniciei minha jornada no mundo da programação em 2019, aprendendo Python com um editor de código
+para Smartphone e o canal do YouTube
+&amp;ldquo;&lt;a href=&#34;https://www.youtube.com/c/CursoemV%C3%ADdeo&#34;&gt;Curso em Vídeo&lt;/a&gt;&amp;rdquo;, do professor Gustavo Guanabara,
+com o objetivo de desenvolver jogos. Desde então, meu fascínio por este mundo só aumentou,
+conforme eu me aventurava pelas diversas áreas em que a computação pode atuar.&lt;/p&gt;</description>
+      <content>
+&lt;img src=&#34;https://avatars.githubusercontent.com/u/95258393?v=4&#34;  alt=&#34;Profile Pic&#34;  class=&#34;center&#34;  style=&#34;border-radius: 999px; max-width: 250px;&#34;    /&gt;
+
+
+&lt;p&gt;Meu nome é Douglas Silva. Sou graduando em Ciência da Computação pela Universidade Federal de
+Campina Grande (UFCG), e atualmente atuo como suporte de TI e DevOps pelo Guardians UFCG.&lt;/p&gt;
+&lt;p&gt;Iniciei minha jornada no mundo da programação em 2019, aprendendo Python com um editor de código
+para Smartphone e o canal do YouTube
+&amp;ldquo;&lt;a href=&#34;https://www.youtube.com/c/CursoemV%C3%ADdeo&#34;&gt;Curso em Vídeo&lt;/a&gt;&amp;rdquo;, do professor Gustavo Guanabara,
+com o objetivo de desenvolver jogos. Desde então, meu fascínio por este mundo só aumentou,
+conforme eu me aventurava pelas diversas áreas em que a computação pode atuar.&lt;/p&gt;
+&lt;p&gt;Atualmente, dentro do vasto mundo da computação, estas são as áreas nas quais eu tenho interesse
+ou já atuei:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Desenvolvimento Frontend, com &lt;code&gt;React&lt;/code&gt; e &lt;code&gt;NextJS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Desenvolvimento Backend, com &lt;code&gt;Java&lt;/code&gt; e &lt;code&gt;Spring Boot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Administração de Sistemas Linux&lt;/li&gt;
+&lt;li&gt;Desenvolvimento de Jogos 2D&lt;/li&gt;
+&lt;li&gt;Pesquisa e Desenvolvimento&lt;/li&gt;
+&lt;li&gt;Cíbersegurança e Ethical Hacking&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
