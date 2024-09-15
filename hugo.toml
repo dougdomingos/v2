@@ -1,4 +1,4 @@
-baseurl = "https://dougdomingos.github.io/"
+baseurl = "https://dougdomingos.github.io/v2/"
 languageCode = "en-us"
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
@@ -69,7 +69,7 @@ theme = "terminal"
 
     [languages.en.params.logo]
         logoText = "doug@silva"
-        logoHomeLink = "/"
+        logoHomeLink = "/v2"
 
     [languages.en.menu]
         [[languages.en.menu.main]]
