@@ -58,7 +58,7 @@ theme = "terminal"
         keywords = "Java, DevOps, Linux"
         copyright = ""
         menuMore = "Show more"
-        readMore = "Read more"
+        readMore = "Read full article"
         readOtherPosts = "Read other posts"
         newerPosts = "Newer posts"
         olderPosts = "Older posts"
@@ -68,7 +68,7 @@ theme = "terminal"
         words = "words"
 
     [languages.en.params.logo]
-        logoText = "doug@silva"
+        logoText = "dougsilva@dev"
         logoHomeLink = "/v2"
 
     [languages.en.menu]
