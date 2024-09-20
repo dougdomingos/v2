@@ -1,0 +1,8 @@
+/* Table of contents custom CSS */
+nav#TableOfContents li {
+  margin-top: 1ch;
+}
+
+nav#TableOfContents li > ul {
+  margin-bottom: 0;
+}
