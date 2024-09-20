@@ -51,12 +51,12 @@ enableEmoji = true
 [languages]
     [languages.en]
         languageName = "English"
-        title = "Douglas Silva - Computer Science"
+        title = "Douglas Silva :: Computação@UFCG"
 
     [languages.en.params]
         subtitle = "Computer Science student at Federal University of Campina Grande (UFCG)"
         owner = "Douglas Domingos"
-        keywords = "Java, DevOps, Linux"
+        keywords = "java, linux, ufcg, computer science, programming"
         copyright = ""
         menuMore = "Show more"
         readMore = "Read full article"
