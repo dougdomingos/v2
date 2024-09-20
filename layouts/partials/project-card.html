@@ -1,0 +1,13 @@
+<a href="{{ .link }}">
+  <div class="project-card">
+    <div class="project-card__info">
+      <span>{{ .icon | emojify }} {{ .info.title }}</span>
+      <p>{{ .info.description }}</p>
+    </div>
+    <div class="project-card__tags">
+      {{ range .tags }} 
+      <span>#{{ . }}</span> 
+      {{ end }}
+    </div>
+  </div>
+</a>

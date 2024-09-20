@@ -1,0 +1,33 @@
+#projects a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#projects .project-card {
+  margin-top: 1.5em;
+  padding: 1.5em;
+  border: 3px solid var(--accent);
+}
+
+#projects .project-card__info span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#projects .project-card__info p {
+  margin: 0;
+  margin-top: 0.8em;
+}
+
+#projects .project-card__tags {
+  display: flex;
+  gap: 0.8em;
+  margin-top: 1em;
+}
+
+#projects .project-card__tags span {
+  color: var(--background);
+  background-color: var(--accent);
+  font-size: 14px;
+  padding: 0.25em 0.5em;
+}

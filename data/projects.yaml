@@ -1,0 +1,38 @@
+projects:
+  - link: https://github.com/dougdomingos/DSA-Java
+    icon: ":pushpin:"
+    info:
+      title: DSA-Java
+      description: Study-driven data structures and algorithm implementations in Java
+    tags: 
+      - java
+      - maven
+      - test-ci
+  
+  - link: https://github.com/dougdomingos/expense-tracker
+    icon: ":star:"
+    info:
+      title: Expense-Tracker
+      description: REST API built with Spring Boot, JWT Auth and H2 Database
+    tags: 
+      - spring-boot
+      - jwt-auth
+  
+  - link: https://github.com/dougdomingos/HashDictionary
+    icon: ":book:"
+    info:
+      title: HashDictionary
+      description: A college project for analising different hashing functions
+    tags: 
+      - python
+      - hashing
+  
+  - link: https://github.com/dougdomingos/portfolio-v1
+    icon: ":old_key:"
+    info:
+      title: Portfolio-V1
+      description: The first iteration of my portfolio website
+    tags: 
+      - nextjs
+      - tailwindcss
+      - blog
