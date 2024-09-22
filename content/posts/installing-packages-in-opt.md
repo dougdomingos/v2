@@ -1,10 +1,10 @@
 +++
-title = "How to globally install packages in `/opt` directory on Linux"
+title = 'Installing software in Linux, the "hard" way'
 date = "2024-09-15T13:34:18-03:00"
 author = "Douglas Domingos"
-tags = ["linux", "tutorial", "utility"]
-keywords = ["linux", "packages", "software", "sysadmin"]
-description = "Installing software in Linux may be tricky sometimes, especially when dealing with packaged files like .zip or .tar.gz. But with this simple guide, solving situations like these will be as easy as moving files between directories (literally)."
+tags = ["linux", "tutorial", "sysadmin"]
+keywords = ["linux", "tutorial", "sysadmin"]
+description = "When package managers aren't enough for your needs, you might need to take matters into your own hands. And this is how you do it."
 showFullContent = false
 readingTime = true
 hideComments = false
@@ -12,144 +12,191 @@ hideComments = false
 
 ## Introduction
 
-If you're an avid Linux user, it's very likely that you have found yourself in one of the
-following situations:
+Picture this: you're setting up the packages and tools to develop your brand new application.
+Everything is going smooth, until you found out that **one of the softwares you need is only
+avaliable as package of executable binaries**, without any installers and nowhere to be found
+in your package managers. Seems like quite the overhead, right?
 
-- You needed to **install the most recent version** of a package, but the **package
-  mananger of your distribution only had an older version** of it
+Well, not to worry! Because today we're out to get our hands dirty and learn how to install
+**ANY PACKAGE** in a Linux system ‒ and you might just learn a few new tricks about Linux
+along the way.
 
-- You wanted to **install a software**, but **no installer was provided**, or **it wasn't
-  avaliable** in your package manager
+## I. Housing the package
 
-- You wanted to build a script to **automate the installation** of a package for **all
-  users of a system**, but you wasn't sure of **where to save the package** nor **how to
-  make it avaliable globally**
+The first step to solve our problem is to define **where the package will be stored in
+our system**. In practice, you may use any directory you'd like, but to keep things
+organized, let's use the `/opt` directory.
 
-If you've had scenarios like these, or you only want to learn something new, stick
-around. I got the solution for you.
-
-## A little of Linux file system
-
-You might not know, but each directory in the root of your Linux file system is used to
-**store certain files and directories**. Knowing at least a few of them and their
-purpose might prove useful in situations like this.
-
-In this scenario, we're gonna focus on three of those directories:
-
-- `/opt`: Stores **third-party software** that is not part of your Linux distribution
-- `/etc`: Stores **system-wide configuration files**
-- `/usr`: Contains **system commands** and **files required to run installed software**
-
-At this point, you've probably figured out that we're installing our precious packages
-in the `/opt` directory.
-
-## `/opt`, the home for your third-party packages
-
-To keep your system organized (and, thus, less prone to breaking out of nowhere),
-create a new directory inside `/opt` for your package before saving its file. I recommend
-creating a directory with the same name of the package, making it easy to find
-afterwards.
-
-Now, you've pretty much done more than half of the work needed to conclude the
-installation. If you take a look inside the package directory, you'll probally find a
-`/bin` directory. That's where the files you use to actually run the software lives in.
-At this point, you can start your apps through the terminal
-
-> *"Cool, but how do I make my software avaliable throughout the whole system?"*
-
-Here's where we make the magic: you only need to add the executable files to your `$PATH`
-variable. But how to do it? That's where the `/etc` and `/usr` directories come in.
-
-## Adding your package binaries to `$PATH`
-
-There are two ways of achieving this: the easy and quick way and the risky way.
-
-### 1. EASY: The power of *Symlinks*
-
-Here, all you have to do is **create a symlink to the executable file inside the `/bin`
-directory** of your package. The symlink will live inside the `/usr/local/bin`
-directory.
-
-> **What are symlinks?**  
-> *Links* are special files that "point" to other files. Linux offers support for two
-> types of links:
+> **The `/opt` directory** is reserved for installing software and packages that
+> are not part of the system's core components, i.e, **not necessary for your
+> system to function** properly.
 >
-> - **Hard links**: a file that points to the data of another file
-> - **Soft links**: a file that points to another file or directory
->
-> When using links, you'll probably want to use **soft links**, as they're easier to
-> manage and more flexible than **hard links**. If you want to learn more about symlinks
-> in Linux, give [this article](https://www.redhat.com/sysadmin/linking-linux-explained)
-> a read.
+> When installing your package, **you should create a new directory** (preferably
+> with the package name, like `/opt/<package_name>`) to **avoid mixing up files**
+> of different packages.
 
-To create a symlink, head to your terminal and simply run the following command:
+You may have noticed that inside your package, there's a `/bin` directory that contains
+some executable files. At this point, we can run these files, but we'll have to specify
+the full path of the file every time.
+
+## II. Make your package avaliable with `$PATH`
+
+To avoid having to pass the full path of the executables each time we run the software,
+we'll make use of the `$PATH` environmental variable to **specify the path of our
+installation**.
+
+> **The `$PATH` variable** is a special string variable of the shell that specifies
+> a **set of directories where executable files may live**. Each directory is **delimited
+> by a colon** (`:`)
+>
+> You may specify new directories in `$PATH` by **exporting the variable with the new
+> value** (`export PATH=/new/dir/path:$PATH`).
+
+Now, there are two ways of adding a executable to `$PATH`:
+
+### Adding a _Symlink_ to the executables
+
+_Symlinks_ are (roughly) **files that "point" to other file paths or directories**. This
+allows us to access files accross the file system (and even other file systems), **without
+specifying the full path**.
+
+You can create new _symlinks_ using the command `ln -s TARGET LINK_NAME`, where:
+
+- `TARGET` is the **path of the file which the _symlink_ will point to**
+
+- `LINK_NAME` is the **path where the _symlink_ will be created**
+
+To make it avaliable in `$PATH`, we may **create a _symlink_ inside a directory that is
+already in `$PATH`**. In this case, let's use the `/usr/local/bin` directory to store our
+_symlink_.
+
+To create our _symlink_, simply run the following command:
 
 ```bash
-ln -s /opt/<your_package_dir>/bin/<executable_filename> /usr/local/bin/<executable_filename>
+# Replace the placeholders with the proper names of your directories/files
+ln -s /opt/<package_name>/bin/<filename> /usr/local/bin/<filename>
 ```
 
-This will make the executable avaliable globally in the system, for both users or
-scripts.
+Once created, the executable will be avaliable in your shell. Try it out by **typing the
+name of the _symlink_ in your terminal**.
 
-- Pros: easy to setup, avoid tweaking with `$PATH` configuration
-- Cons: can only setup one executable per link
+#### Trade-offs of using _symlinks_
 
-> **Note**: You may **setup the symlink to the package's `/bin` directory** instead of only
-> one executable, but you'll have to **specify the executable** when running it with Bash
-> (e.g. `test/exec1` instead of simply `exec1`)
+This approach is **pretty straightforward and easy to setup**. We don't need to edit
+the value of `$PATH`, thus **avoiding possible configuration errors**. Also, by placing
+the _symlink_ inside `/usr/local/bin`, we make it **avaliable for all users of the
+system**.
 
-### 2. RISKY: The `$PATH` of all things
+Unfortunately, there are also drawbacks. If you need to add multiple executables, you'll
+need do **create one _symlink_ per executable**. You may **create a _symlink_ to the `/bin`
+directory** of the package, but you'll still need to **specify the name of the
+executable**.
 
-This is a more complete (but somewhat risky) way of setting up your package globally.
-We'll make use of `/etc` directory to **store some configuration files** for our package.
-I'm assuming you have basic command-line knowledge, so let's get to it, step by step:
+> **Links in Linux**  
+> Links are a powerful tool in Linux, allowing you to **create shortcuts between
+> files and directories**, **organizing your files easily**, and much more.
+> I recommend reading this [RedHat post about linking in Linux](https://www.redhat.com/sysadmin/linking-linux-explained).
 
-1. Open a terminal window and head to the `/etc` directory
+### Adding the package directory to `$PATH`
 
-2. Create a new file with the name of your package followed by a `rc` suffix
-   (e.g. `vi /etc/myprogramrc`)
+If you want a more **robust solution**, you may effectivelly edit the `$PATH` variable to
+**include your package directory**. For that, we'll need to **create a configuration file**
+to export our updated `$PATH`.
 
-3. Add the following code to the file:
+> **The `/etc/` directory** contains configuration files of system applications, e.g.
+> service management, network, SSH, and many more. Be careful when making changes to
+> files here.
 
-    ```bash
-    export PACKAGE_HOME=/opt/<your_package_dir>
-    export PATH=$PACKAGE_HOME/bin:$PATH
-    ```
+Similar to `/opt`, Linux also has a directory for **storing system-wide configuration files:
+the `/etc` directory**. Actually, there's the `/etc/opt` directory, which is intended to
+store configuration files for **applications installed in `/opt`**.
 
-4. Now, create a new shellscript (e.g. `config-package.sh`) file in `/etc/profile.d/`
-   and paste the following code:
+To create the configuration file, head to `/etc/opt` and create a new file, named as
+`<package_name>rc`. Inside it, paste the following code and replace the placeholders
+with the correspondent paths:
 
-    ```bash
-    # Load configuration for package <package_name>
-    [ -f /etc/<your_config_file> ] && . /etc/<your_etc_file>
-    ```
+```bash
+# Replace "PACKAGE_HOME" with the name of your package
+export PACKAGE_HOME=/opt/<package_dir>
+export PATH=$PACKAGE_HOME/bin:$PATH
+```
 
-This will effectivelly **load your configuration every time a user logs in** the system.
+To load the settings into your shell session, run `source /etc/opt/<config_file>`
+and check your `$PATH` variable with `echo $PATH`. If the directory of your package is
+there, your configuration file is working.
 
-- Pros: **all executables inside the `/bin` directory** of the package will be loaded
-- Cons: executables may not be avaliable for **scripts that do not load `/etc/profile`
-  configurations**. You also may **mess up your `$PATH` variable** if not being careful
+Now, you might have noticed that **the configurations aren't loaded automatically** when
+you open a new terminal. To address this, simply add this configuration to one of the
+following files:
 
-> **What is `/etc/profile*` used for?**  
-> The `/etc/profile` file and `/etc/profile.d` directory **contains variables and
-> configurations that are loaded in the user's shell at login**. It's useful to load
-> common configurations for all users. If you intend to use these files to
-> load another configurations beyond this guide, I recommend **creating a new file
-> inside `/etc/profile.d`** to avoid messing up existent configurations.
+```bash
+# This loads "PACKAGE" into $PATH
+[ -f /etc/opt/<config_file> ] && source /etc/opt/<config_file>
+```
+
+- For **only one user**, append the load configuration at the end of `~/.bashrc`
+
+- For **all users**, create a shell script (with the `.sh` suffix) in `/etc/profile.d/`
+  with the load configuration
+
+#### Trade-offs of using `$PATH`
+
+One advantage of this approach is that **every executable inside the `/bin` directory
+will be avaliable** in your shell. Also, you may choose to **make it avaliable for
+only one user or for all users**, by simply placing the load configuration in a
+different file.
+
+However, **tweaking with the `$PATH` variable may break your shell configuration**
+if you're not careful enough. The same goes for editing files inside `/etc/profile.d`;
+it's best to create a new file rather than edit an existing one.
+
+## III. Updating the desktop menu (BONUS)
+
+If you’re installing an application with a graphical interface (not CLI-based), you’ll
+likely want to add it to your desktop menu for easier access. In this case, we'll need
+to take an extra step.
+
+The entries in your desktop menu are located in the `/usr/share/applications`
+directory. Each application has a `.desktop` entry file, containing settings for how it
+is displayed in the menu.
+
+To add a desktop entry file for your application:
+
+1. Create a new `.desktop` entry file with the name of your application
+
+2. Open the file and add the following configuration, replacing the placeholders with
+   the correct settings:
+
+   ```bash
+   [Desktop Entry]
+   Version=1.0
+   Type=Application
+   Name=<APP_NAME>
+   Icon=/opt/<PACKAGE_NAME>/<ICON_FILE>
+   Exec="/opt/<PACKAGE_NAME>/<EXEC_FILE>" %f
+   Comment=<APP_DESCRIPTION>
+   Categories=<KEYWORD1;KEYWORD2;>
+   ```
+
+3. Save the file and run `sudo update-desktop-database`
+
+Now, the application is avaliable in your app menu, without the need to start it through
+the terminal.
 
 ## Summary
 
-- Store your softwares in `/opt` for easy access throughout all the system
-- Use symlinks for quickly setting up single executables for all users
-- Create a configuration file in `/etc/` directory and add it to your `$PATH`
-  variable if you need to setup multiple executables at once
+- Install your package in the `/opt` directory
+
+- Use _symlinks_ or edit your `$PATH` variable to include the package executables for
+  an user or all the system
+
+- If the package is not CLI-based, add a `.desktop` entry file at
+  `/usr/share/applications` to add the package to your desktop menu
 
 ## Conclusion
 
-Phew. That was quite a lot. Linux might look a bit frightening at first, but once
-you learn how to properly use it, it becomes a powerful tool, or maybe just another
-reason for you to brag about what an IT genius you are (not me, I'm far from it,
-actually).
+Although application support for Linux platforms is pretty decent today, you'll
+eventually come across a situation like the one we've discussed here. Also, you can
+automate this process by creating shell scripts to setup the files for you.
 
-That's it. I hope this article was helpful and that you have learned something useful
-from it. 'Til next time!
+Well, that's it. Until next time! :wave:
