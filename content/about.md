@@ -12,18 +12,21 @@ readingTime = false
 My name is Douglas Silva. I'm a Computer Science undergraduate at Federal University of
 Campina Grande (UFCG), and currently working as IT Support and DevOps at Guardians UFCG.
 
-I began my adventures in the world of programming in 2019, learning Python using only
-my phone and watching free online courses from the YouTube channel
-"[Curso em Vídeo](https://youtube.com/c/CursoEmVideo)" by professor Gustavo Guanabara.
-My inital goal was to learn how to make games, but there are so many possibilities
-in this vast world that I simply like to code, no matter the purpose.
+At first, my interest in programming was simply to learn how to make games. I began studying
+Python through YouTube free courses. Since then, I've explored a ton of different
+technologies and fields of software development. Although I'm not sure of which career path
+to choose yet, I want to make our lifes easier and more fun through software.
 
-Currently, this are the techonologies I have experience with (or have interest of
-learning at some point):
+## :rocket: My skills
 
-- Frontend development with `React` and `NextJS`
-- Backend development with `Java` and `Spring Boot`
-- System Administration with Linux
-- Game development
-- Research and development
-- Cybersecurity and Ethical Hacking
+- **Frontend development**, with **React**, **Tailwind CSS**, and **Next.js**
+
+- **Backend development**, using **Node.js** and **Express**, and more recently **Spring Boot**
+
+- **Task automation** with **Python** and **Bash**
+
+## :pushpin: What I'm interested in
+
+- **Cybersecurity** and **Ethical Hacking**
+
+- **2D Game Development**
