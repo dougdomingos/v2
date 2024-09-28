@@ -45,9 +45,8 @@ To avoid having to pass the full path of the executables each time we run the so
 we'll make use of the `$PATH` environmental variable to **specify the path of our
 installation**.
 
-> **The `$PATH` variable** is a special string variable of the shell that specifies
-> a **set of directories where executable files may live**. Each directory is **delimited
-> by a colon** (`:`)
+> **The `$PATH` variable** is a special shell variable that defines a **list of directories
+> where executable files are located**. Each directory is **delimited by a colon** (`:`)
 >
 > You may specify new directories in `$PATH` by **exporting the variable with the new
 > value** (`export PATH=/new/dir/path:$PATH`).
