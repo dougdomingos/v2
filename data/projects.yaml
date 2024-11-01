@@ -1,4 +1,18 @@
 projects:
+- link: https://github.com/dougdomingos/expense-tracker
+  info:
+    title: expense-tracker
+    description: REST API built with Spring Boot and JWT Authentication for finance
+      management
+  tags:
+  - jwt-auth
+  - spring-boot
+  - study-project
+- link: https://github.com/dougdomingos/dougdomingos
+  info:
+    title: dougdomingos
+    description: Home repository for my GitHub profile
+  tags: []
 - link: https://github.com/dougdomingos/v2
   info:
     title: v2
@@ -7,15 +21,6 @@ projects:
   - blog
   - hugo-site
   - portfolio
-- link: https://github.com/dougdomingos/expense-tracker
-  info:
-    title: expense-tracker
-    description: "REST API com Spring Boot para gerenciamento de finan\xE7as"
-  tags:
-  - backend
-  - java
-  - spring-boot
-  - study-project
 - link: https://github.com/dougdomingos/portfolio-v1
   info:
     title: portfolio-v1
@@ -25,11 +30,6 @@ projects:
   - nextjs
   - tailwind-css
   - typescript
-- link: https://github.com/dougdomingos/dougdomingos
-  info:
-    title: dougdomingos
-    description: dougdomingos
-  tags: []
 - link: https://github.com/dougdomingos/AutoExamChecker
   info:
     title: AutoExamChecker
