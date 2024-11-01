@@ -3,6 +3,9 @@ name: Update repository list
 env:
   SCRIPT_PATH: .github/scripts/fetch_projects.py
 
+permissions:
+  contents: write
+
 on:
   # This script runs at 00h00 every Sunday 
   schedule:
@@ -27,3 +30,11 @@ jobs:
 
       - name: Run script
         run: python ${{ env.SCRIPT_PATH }}
+      
+      - name: Commit changes to repository
+        run: |
+          git config --global user.name "Douglas Domingos"
+          git config --global user.email "dougdomingos@users.noreply.github.com"
+          git add ./data/projects.yaml
+          git commit -m "chore(actions): update project list"
+          git push
