@@ -1,4 +1,5 @@
+{{ $image := resources.Get (.Get "src") }}
 <figure>
-  <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}>
-  <figcaption>{{ with .Get "caption" }} {{ . | plainify }} {{ end }}</figcaption>
+  <img src="{{ $image.Permalink }}" alt="{{ .Get "alt" }}" loading="lazy">
+  <figcaption>{{ .Get "caption" }}</figcaption>
 </figure>

@@ -27,7 +27,7 @@ to easily automate tasks in your repository. **Each repository can have multiple
 workflows**, represented by YAML files inside the `.github/workflows/` directory of a
 repository. This make workflows easy to write and understand.
 
-{{< picture src="/v2/img/github-actions.png" alt="GitHub Actions" caption="Actions can be use for a wide range of tasks" >}}
+{{< picture src="/img/github-actions.png" alt="GitHub Actions" caption="Actions can be use for a wide range of tasks" >}}
 
 You can define workflows **triggered by different types of events** (like pushes and pull
 requests), and use them for a vast variety of tasks, like testing, deploying to production,
