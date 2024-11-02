@@ -1,0 +1,4 @@
+<figure>
+  <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}>
+  <figcaption>{{ with .Get "caption" }} {{ . | plainify }} {{ end }}</figcaption>
+</figure>
