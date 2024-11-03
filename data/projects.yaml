@@ -1,4 +1,18 @@
 projects:
+- link: https://github.com/dougdomingos/v2
+  info:
+    title: v2
+    description: My personal website, built with Hugo SSG and Terminal theme by @panr
+  tags:
+  - blog
+  - hugo-site
+  - portfolio
+- link: https://github.com/dougdomingos/dougdomingos
+  info:
+    title: dougdomingos
+    description: Home repository for my GitHub profile
+  tags:
+  - readme-profile
 - link: https://github.com/dougdomingos/expense-tracker
   info:
     title: expense-tracker
@@ -8,19 +22,6 @@ projects:
   - jwt-auth
   - spring-boot
   - study-project
-- link: https://github.com/dougdomingos/dougdomingos
-  info:
-    title: dougdomingos
-    description: Home repository for my GitHub profile
-  tags: []
-- link: https://github.com/dougdomingos/v2
-  info:
-    title: v2
-    description: My personal website, built with Hugo SSG and Terminal theme by @panr
-  tags:
-  - blog
-  - hugo-site
-  - portfolio
 - link: https://github.com/dougdomingos/portfolio-v1
   info:
     title: portfolio-v1
