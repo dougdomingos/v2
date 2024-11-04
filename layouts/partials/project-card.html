@@ -1,12 +1,12 @@
 <a href="{{ .link }}">
   <div class="project-card">
     <div class="project-card__info">
-      <span>{{ ":open_file_folder:" | emojify }} {{ .info.title }}</span>
+      <span translate="no">{{ ":open_file_folder:" | emojify }} {{ .info.title }}</span>
       <p>{{ .info.description }}</p>
     </div>
     <div class="project-card__tags">
       {{ range .tags }} 
-      <span>#{{ . }}</span> 
+      <span translate="no">#{{ . }}</span> 
       {{ end }}
     </div>
   </div>
