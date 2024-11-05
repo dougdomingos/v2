@@ -2,8 +2,8 @@
 title = "Automating tasks with Github Actions"
 date = "2024-11-01T17:35:48-03:00"
 author = "Douglas Domingos"
-tags = ["github-actions", "automation", "ci"]
-keywords = ["github", "python", "automation", "ci"]
+tags = ["github-actions", "automation", "ci-cd"]
+keywords = ["github", "python", "automation", "ci-cd"]
 description = "GitHub Actions are a powerful, yet straightforward tool for automating tasks in your codebase, from running tests to building your project. Here, we'll approach its basic concepts and use cases."
 showFullContent = false
 readingTime = true
@@ -12,64 +12,48 @@ hideComments = false
 
 ## Introduction
 
-While developing software, it's very common to have a set of **tasks that must be executed
-repeatedly, in a specific order or time**. This would require the team to create dedicated
-scripts for those tasks, **increasing complexity and diverting the team's focus**.
+In software development, it’s common to have some tasks that need to be executed regularly, at a
+specific time or in a certain order. Usually, teams would write dedicated scripts for these tasks,
+which **adds complexity and diverts focus** from the main product.
 
-It's in these situations that **CI/CD platforms** shines the brightest, simplifying the
-development workflow by **automating tasks**, allowing devs to focus on the real software.
-Today, we're taking a look on one of those: **GitHub Actions**.
+That's where **CI/CD platforms** comes in, streamlining development workflows by automating
+repetitive tasks so developers can focus on the actual software. Here, we’ll be exploring one of
+these platforms: **GitHub Actions**.
 
 ## What are GitHub Actions?
 
-**GitHub Actions** is a CI/CD platform directly integrated with GitHub, which allows you
-to easily automate tasks in your repository. **Each repository can have multiple
-workflows**, represented by YAML files inside the `.github/workflows/` directory of a
-repository. This make workflows easy to write and understand.
+**GitHub Actions** is a **CI/CD platform integrated directly into GitHub**, which allows you to
+easily automate tasks within repositories. **Each repository can have multiple workflows**,
+represented by YAML files located in the `.github/workflows/` directory. As you'll see, this makes
+workflows **easy to write and understand**.
 
-{{< picture src="/img/github-actions.png" alt="GitHub Actions" caption="Actions can be use for a wide range of tasks" >}}
+{{< picture src="/img/github-actions.png" alt="GitHub Actions" caption="Some template workflows offered by GitHub" >}}
 
-You can define workflows **triggered by different types of events** (like pushes and pull
-requests), and use them for a vast variety of tasks, like testing, deploying to production,
-code style checking, and many, many more. Not only that, workflows can also be **run on a
-schedule**, **combined with other workflows** and even **edit your repository**, by adding
-or modifying branches and files. You can even **use actions created by other developers**!
+You can define **workflows triggered by various events**, such as pushes and pull requests, and use
+them for a wide range of tasks — testing, deploying to production, enforcing code style, and much
+more. Workflows can even be **scheduled**, **combined with other workflows**, and used to **update
+your repositories**. Plus, **you can leverage actions created by other developers**!
 
 ## Setting up an workflow
 
 New workflows can be added to your repository in two ways:
 
-- Through [GitHub](https://github.com/) itself. You may choose to either **create the
-  YAML file from scratch** or **use a template workflow**
+- Through [GitHub](https://github.com/), where you can choose from many template workflows and
+  adjust them as needed
 
-- **Manually creating YAML files** inside the `.github/workflows` directory
+- **By manually creating the workflow file** inside `.github/workflows`
 
-To fully understand the YAML structure of a workflow, let's create a simple action that
-prints "Hello Actions!" when executed.
+Regardless of your choice, describing workflows is writing YAML files. And, to fully understand the
+structure of a workflow, let's create one that simply prints "Hello Actions!" at each push made to
+the repository.
 
-### Basic structure
+## Workflow structure
 
-A workflow YAML file have at least three blocks: `name`, `on`, and `jobs`.
-
-- `name`: as it suggests, it defines the name of the workflow. If omitted, GitHub will
-  use the **file path relative** to the root of the repository.
-
-- `on`: defines the **events that will trigger the workflow's execution**. Workflows
-  may have **multiple event triggers**, and can be **restricted to changes on a specific
-  set of branches or files**.
-
-- `jobs`: here's where you define **the tasks performed by the workflow**. You may define
-  multiple jobs (that runs on parallel by default), and each job can also specify
-  **the environment it runs on**, (e.g `ubuntu-latest`, `windows-latest`, `macos-latest`).
-
-### Writing our "Hello Actions!" workflow
-
-Considering our action that prints "Hello Actions!", here's the workflow YAML file:
+Implementing our "Hello Actions" workflow is as simple as this:
 
 ```yaml
 name: Simple Action
 
-# The action will run at every push made to the repository
 on: push
 
 jobs:
@@ -81,22 +65,42 @@ jobs:
         run: echo "Hello Actions!"
 ```
 
-Here, we have one job `print-msg` with only one step (that actually prints the
-message). Each job can have multiple steps.
+Now, let's understand what each part of this code does:
 
-## Use case: automatically running tests for pull requests
+- `name`, as it suggests, defines the name of the workflow. While it is optional, **I strongly
+  recommend** to always specify the workflow name — not only for readability, but also to **allow
+  workflow composition**.
 
-Let's consider a Java application built with Maven. It would be very convenient to
-**run the tests for every pull request made to the `main` branch**, right? So, let's
-write a workflow for that.
+- `on` defines the **events that will trigger the workflow's execution**. You can specify **multiple
+  triggers** for the same workflow, and even **restrict the event scope** (e.g. pull requests to a
+  specific branch, or changes made to a specific file).
 
-Our workflow only needs to setup Java and execute the test suites, so we only need
-one job:
+- `jobs` describe **the actions performed by the workflow**. An workflow can have multiple jobs
+  (that are executed on parallel by default), where each job is **identified by an unique name**.
+
+  - Each job must define **the environment it runs on** (which is specified by the `runs-on` key)
+
+  - A job describes **the tasks it executes as a sequence of `steps`**. Each step can execute
+    commands, setup tasks and even other actions
+
+## Example 1: Automating tests for pull requests made to the `main` branch
+
+**Automating tests plays a crucial role at code maintainabilty**, as it ensures that **changes made
+to the codebase do not break what previously worked**. Such task can be easily achieved with GitHub
+Actions by setting up **an workflow that is executed for every pull request** made to the
+repository.
+
+Consider a project written in Java with Maven as build tool. We want to **automatically run all test
+classes** for every pull request made to the `main` branch. This can be achieved with the following
+workflow:
 
 ```yaml
 name: Run tests with Maven
 
-# [...]
+# The workflow only runs for pull requests made to the "main" branch
+on:
+  pull_requests:
+    branches: "main"
 
 jobs:
   run-tests:
@@ -119,55 +123,22 @@ jobs:
         run: mvn test
 ```
 
-Now, to execute the workflow at each pull request to the `main` branch, add the
-following code to the `on` block:
+## Example 2: Scheduled updates of a repository
 
-```yaml
-# The action only runs for pull requests made to the main branch
-on:
-  pull_requests:
-    branches: "main"
-```
+In my [old website](https://github.com/dougdomingos/portfolio-v1), I've set up Next.js to regularly
+fetch my repository list from [GitHub API](https://api.github.com), so that my project list would
+always be updated. After migrating to [Hugo](https://gohugo.io/), I kept wondering on how to
+implement this functionality with as little overhead as possible.
 
-Here's the complete YAML file:
+It turns out that **GitHub Actions was perfect for my scenario**. Simply write a workflow that
+**fetches data from GitHub API** and **commits the updated list into the repository**. After some
+_googling_ (and a little help from ChatGPT), I was able to come up with an working solution.
 
-```yaml
-name: Run tests with Maven
+While **I chose to use Python for the fetch script**, you could write a similar solution in plain
+old Shell Script (though the equivalent code would likely be _much_ more verbose) or in any language
+you prefer.
 
-on:
-  pull_request:
-    branches: "main"
-
-jobs:
-  run-tests:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Java 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: "17"
-          distribution: "temurin"
-          cache: maven
-
-      - name: Test with Maven
-        run: mvn test
-```
-
-## Use case: schedule updates in your repository
-
-This is the reason I've wrote this post: using GitHub Actions, I was able to write a
-workflow that **updates my [project list](/projects) weekly**, fetching the data from
-GitHub API and **commiting the repository list back to the repository**.
-
-Here's the catch: fetching and ordering the data from GitHub API is **not fitted for
-simple shellscripts**, so **I choose to use Python** for this task. But how can we
-**integrate a Python script in our workflow**? Also, how can we **make the script run
-automatically** every week?
-
-First, let's create the script for fetching and parsing the data, at `.github/scripts/fetch_data.py`:
+First, here's my Python script for fetching and parsing the data, at `.github/scripts/fetch_data.py`:
 
 ```python
 import requests
@@ -206,7 +177,7 @@ def convert_to_yaml(repo_list: list):
     projects = []
 
     for repo in repo_list:
-        # You can add more repository properties here
+        # You can add more properties here
         project = {
             "link": repo["html_url"],
             "info": {"title": repo["name"], "description": repo["description"]},
@@ -226,106 +197,24 @@ if __name__ == "__main__":
     convert_to_yaml(fetch_github_repos("your_username"))
 ```
 
-In the workflow, install Python and add the required `pyyaml` and `requests` libraries:
+As for the workflow file, at `.github/workflows/fetch_projects.yaml`:
 
 ```yaml
 name: Update project list
 
-# The "env" property allows us to define environment variables
+# Actions allow you to define environment variables too!
 env:
   SCRIPT_PATH: .github/scripts/fetch_projects.py
 
+# Gives the workflow write permissions over the repository
+permissions:
+  contents: write
+
+# Workflow is scheduled to run every Sunday at 00h00
 on:
+  schedule:
+    - cron: "0 0 * * 0"
   workflow_dispatch: # this allows us to manually run the workflow in GitHub
-
-jobs:
-  update-list:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # Install the required Python version
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      # Ensure required packages are installed
-      - name: Install dependencies
-        run: pip install pyyaml requests
-
-      # Execute the script
-      - name: Run script
-        run: python ${{ env.SCRIPT_PATH }}
-```
-
-Now, we need to commit the updated file back to our repository. The workflow file
-must have write permission to the repository. For that, add the following code:
-
-```yaml
-# This allows the workflow to make changes to the repository
-# ...
-permissions:
-  contents: write
-
-jobs:
-  update-list:
-    # ...
-    # Commit the updated file into the repository
-    - name: Commit changes to repository
-      run: |
-        git config --global user.name "<your-username-here>"
-        git config --global user.email "<your-email-here>"
-        git add ./data/projects.yaml
-        git commit -m "chore(actions): update project list"
-        git push
-```
-
-Finally, we want to schedule the script to run at a specific time (at 00h00 of
-every Sunday). Luckily, Actions allows us to schedule workflows with Cron-like
-syntax. Just add this code to your `on` block:
-
-```yaml
-# ...
-on:
-  schedule:
-    - cron: "0 0 * * 0"
-  workflow_dispatch:
-# ...
-```
-
-> **Cron syntax**: Cron schedules are specified by strings composed of five fields in a
-> `M H DM MN DW` format, as described below:
->
-> ```text
-> M  H DM MN DW
-> |  |  |  |  |
-> |  |  |  |  └── Day of the week (0-7, where 0 and 7 = Sunday)
-> |  |  |  └───── Month (1-12)
-> |  |  └──────── Day of the month (1-31)
-> |  └─────────── Hour (0-23)
-> └────────────── Minute (0-59)
-> ```
->
-> So, `0 0 * * 0` means "at 00h00 of any day of any month on Sunday"
-
-Here's the complete workflow:
-
-```yaml
-name: Update project list
-
-env:
-  SCRIPT_PATH: .github/scripts/fetch_projects.py
-
-permissions:
-  contents: write
-
-on:
-  schedule:
-    - cron: "0 0 * * 0"
-  workflow_dispatch:
 
 jobs:
   update-list:
@@ -355,8 +244,24 @@ jobs:
           git push
 ```
 
-Also, to ensure that the updated list is avaliable in the website after the script is
-executed, I've added the following block to my `build` workflow:
+> **Cron syntax**: Cron schedules are specified by strings composed of five fields in a
+> `M H DM MN DW` format, as described below:
+>
+> ```text
+> M  H DM MN DW
+> |  |  |  |  |
+> |  |  |  |  └── Day of the week (0-7, where 0 and 7 = Sunday)
+> |  |  |  └───── Month (1-12)
+> |  |  └──────── Day of the month (1-31)
+> |  └─────────── Hour (0-23)
+> └────────────── Minute (0-59)
+> ```
+>
+> So, `0 0 * * 0` means "at 00h00 of any day of any month on Sunday"
+
+Also, to ensure that the updated list is avaliable in the website after the script is executed, I've
+added a "hook" to **trigger the `build` workflow every time the `Update project list` workflow is
+executed** — thus the importance of **always naming your workflows**:
 
 ```yaml
 # ...
@@ -373,8 +278,11 @@ on:
 
 ## Conclusion
 
-GitHub Actions, as well as other CI/CD platforms, are **a powerful tool to master**.
-Although this post not nearly enough to make you an automation specialist, **I recommend
-taking a deeper look into the [GitHub Actions documentation](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions)**.
+GitHub Actions, as well as other CI/CD platforms, are **a powerful tool to master**. While I do
+believe this post may help you with the basics, **I recommend taking a deeper look into the
+[GitHub Actions documentation](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions)**.
 
-See ya! :wave:
+Also, feel free to use any of the workflows you've seen here in your projects. Try adding some new
+features, or combining them with your own.
+
+That's it for now. See ya! :wave:
