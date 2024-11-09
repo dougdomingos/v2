@@ -1,7 +1,0 @@
-<div id="socials">
-  {{ if .IsNamedParams }} {{ $data := index $.Site.Data.socials $.Params.data }} 
-    {{ range $data }}
-      {{ partial "social-badge.html" . }}
-    {{ end }}
-  {{- end -}}
-</div>

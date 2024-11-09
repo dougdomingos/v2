@@ -1,0 +1,15 @@
+div#profile img#github-photo {
+  border-radius: 9999px;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+div#profile div#socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#profile div#socials img {
+  border: none;
+}

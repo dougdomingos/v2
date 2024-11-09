@@ -5,9 +5,7 @@ Toc = false
 readingTime = false
 +++
 
-{{< image src="https://avatars.githubusercontent.com/u/95258393?v=4" alt="Profile Pic" position="center" style="border-radius: 999px; max-width: 250px;" >}}
-
-{{< socials data="socials" >}}
+{{< profile username="dougdomingos" >}}
 
 My name is Douglas Silva. I'm a Computer Science undergraduate at Federal University of
 Campina Grande (UFCG), and currently working as IT Support and DevOps at Guardians UFCG.
