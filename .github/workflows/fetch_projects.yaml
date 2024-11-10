@@ -1,7 +1,7 @@
 name: Update repository list
 
 env:
-  SCRIPT_PATH: .github/scripts/fetch_projects.py
+  SCRIPT_DIR: .github/scripts
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -29,12 +29,7 @@ jobs:
         run: pip install pyyaml requests
 
       - name: Run script
-        run: python ${{ env.SCRIPT_PATH }}
+        run: python ${{ env.SCRIPT_DIR }}/fetch_projects.py
       
       - name: Commit changes to repository
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add ./data/projects.yaml
-          git commit -m "chore(actions): update project list"
-          git push
+        run: bash ${{ env.SCRIPT_DIR }}/commit-updated-list.sh
