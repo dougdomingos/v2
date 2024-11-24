@@ -1,7 +1,6 @@
-<div id="projects">
-  {{ if .IsNamedParams }} {{ $data := index $.Site.Data.projects $.Params.data }} 
-    {{ range $data }}
-      {{ partial "project-card.html" . }}
-    {{ end }}
-  {{- end -}}
+{{ $projects := .Site.Data.projects }}
+<div id="projects"> 
+  {{ range $projects }}
+    {{ partial "project-card.html" . }}
+  {{ end }}
 </div>

@@ -42,10 +42,8 @@ def convert_to_yaml(repo_list: list):
 
         projects.append(project)
 
-    data = {"projects": projects}
-
     with open("./data/projects.yaml", "w") as outfile:
-        yaml.dump(data, outfile, default_flow_style=False, sort_keys=False)
+        yaml.dump(projects, outfile, default_flow_style=False, sort_keys=False)
 
 
 if __name__ == "__main__":
