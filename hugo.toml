@@ -14,7 +14,7 @@ enableEmoji = true
     contentTypeName = "posts"
 
     # if you set this to 0, only submenu trigger will be visible
-    showMenuItems = 2
+    showMenuItems = 3
 
     # show selector to switch language
     showLanguageSelector = false
@@ -46,7 +46,7 @@ enableEmoji = true
 
     # set title for the table of contents
     # can be overridden in a page's front-matter
-    # TocTitle = "Table of Contents" # default
+    TocTitle = "Topics" # default
 
 [languages]
     [languages.en]
@@ -56,7 +56,7 @@ enableEmoji = true
     [languages.en.params]
         subtitle = "Computer Science student at Federal University of Campina Grande (UFCG)"
         owner = "Douglas Domingos"
-        keywords = "java, linux, ufcg, computer science, programming"
+        keywords = "java, linux, ufcg, computer-science, programming"
         copyright = ""
         menuMore = "Show more"
         readMore = "Read full article"
@@ -69,16 +69,21 @@ enableEmoji = true
         words = "words"
 
     [languages.en.params.logo]
-        logoText = "dougsilva@dev"
+        logoText = "@dougdomingos"
         logoHomeLink = "/v2"
 
     [languages.en.menu]
         [[languages.en.menu.main]]
+            identifier = "posts"
+            name = "POSTS"
+            url = "/posts"
+        
+        [[languages.en.menu.main]]
             identifier = "about"
-            name = "~/about"
+            name = "ABOUT"
             url = "/about"
 
         [[languages.en.menu.main]]
             identifier = "projects"
-            name = "~/projects"
+            name = "PROJECTS"
             url = "/projects"
