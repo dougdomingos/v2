@@ -51,7 +51,7 @@ enableEmoji = true
 [languages]
     [languages.en]
         languageName = "English"
-        title = "Douglas Silva :: Computação@UFCG"
+        title = "Douglas Domingos :: Computação@UFCG"
 
     [languages.en.params]
         subtitle = "Computer Science student at Federal University of Campina Grande (UFCG)"

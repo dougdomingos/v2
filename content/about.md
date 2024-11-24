@@ -7,7 +7,7 @@ readingTime = false
 
 {{< profile username="dougdomingos" >}}
 
-My name is Douglas Silva. I'm a Computer Science undergraduate at Federal University of
+My name is Douglas Domingos. I'm a Computer Science undergraduate at Federal University of
 Campina Grande (UFCG), and currently working as IT Support and DevOps at Guardians UFCG.
 
 At first, my interest in programming was simply to learn how to make games. I began studying
