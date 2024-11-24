@@ -1,10 +1,10 @@
 +++
-title = "Creating a multiboot USB drive with Ventoy"
+title = "Creating a Multiboot USB Drive with Ventoy"
 date = "2024-11-20T18:49:01-03:00"
 author = "Douglas Domingos"
 tags = ["ventoy", "tutorial"]
 keywords = ["ventoy", "live-usb", "multiboot"]
-description = "With Ventoy, creating a multiboot USB can be as easy as dragging and dropping your ISO files from one directory to another. And the best part – it's open source!"
+description = "Creating a multiboot USB can be as easy as dragging and dropping your ISO files from one directory to another. All that with only one tool, and the best part – it's open source!"
 showFullContent = false
 readingTime = true
 hideComments = false
@@ -50,7 +50,7 @@ avaliable at [SourceForge](https://sourceforge.net/projects/ventoy/files/). I re
 the tarball at `/opt` for convenience.
 
 Inside the package, you'll see a bunch of executable files. Since we won't use a graphical
-interface, our focus is in the `Ventoy2Disk.sh` script (as root).
+interface, our focus is in the `Ventoy2Disk.sh` script.
 
 > If you wish to install Ventoy using a graphical interface, **execute one of the files labeled
 > with the `VentoyGUI` prefix**. Please note that you have to choose **the executable with the same
@@ -143,12 +143,28 @@ For more information about boot modes, read
 > **manually change the boot order** in your BIOS. Please check out
 > [this list](https://www.disk-image.com/faq-bootmenu.htm) for reference.
 
+## Considerations about Secure Boot
+
+Since Ventoy 1.0.76, **Secure Boot support is enabled by default**. This means that Ventoy should
+work **whether Secure Boot is enabled in your machine or not**.
+
+If Secure Boot is indeed enabled in your machine, you should see the screen below when booting
+Ventoy for the first time. Please follow these instructions in
+[Ventoy's documentation](https://www.ventoy.net/en/doc_secure.html) on how to allow Ventoy on Secure
+Boot.
+
+{{< picture src="/img/sb-first-boot.png" alt="Secure Boot error screenshot" caption="Secure Boot error due to Ventoy certificate not being recognized" >}}
+
+However, if you see **another error screen** while booting Ventoy, **your system may not support
+Ventoy on Secure Boot**. As such, you'll need to disable the option in your Ventoy installation and
+your BIOS.
+
 ## Conclusion
 
-Ventoy is a handy tool for those who frequently test different Linux distributions or keep backup
-ISOs for recovering falty machines. It's easy to install and use, it's lightweight and also quite
-fast when compared to similar tools.
+Until now, Ventoy has proved to be a handy tool for testing Linux distributions and keeping backup
+ISOs for system recovery. It's easy to install and use, it's lightweight and also quite fast when
+compared to similar tools.
 
-I look forward to using Ventoy to create a dual-boot from Linux and Windows in the future, so I'm
-quite intrigued on how it will handle it. And there will be a post on how to do it, once I've worked
-it out.
+While I have not tried installing a system through Ventoy, I plan to try it out soon with Fedora,
+and if everything goes as expected, I may use it to setup a dual-boot installation with Windows in
+the (not so) far future.

@@ -1,5 +1,5 @@
 {{ $image := resources.Get (.Get "src") }}
-<figure>
+<figure class="profile">
   <img src="{{ $image.Permalink }}" alt="{{ .Get "alt" }}" loading="lazy">
   <figcaption>{{ .Get "caption" }}</figcaption>
 </figure>
