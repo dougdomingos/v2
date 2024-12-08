@@ -32,4 +32,4 @@ jobs:
         run: python ${{ env.SCRIPT_DIR }}/fetch_projects.py
       
       - name: Commit changes to repository
-        run: bash ${{ env.SCRIPT_DIR }}/commit-updated-list.sh
+        run: bash -x ${{ env.SCRIPT_DIR }}/commit-updated-list.sh
