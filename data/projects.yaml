@@ -1,3 +1,10 @@
+- link: https://github.com/dougdomingos/Image-Filter-Lab
+  info:
+    title: Image-Filter-Lab
+    description: A Java-based application for applying multiple filters to images
+  tags:
+  - image-filtering
+  - java
 - link: https://github.com/dougdomingos/v2
   info:
     title: v2
@@ -6,13 +13,6 @@
   - blog
   - hugo-site
   - portfolio
-- link: https://github.com/dougdomingos/Image-Filter-Lab
-  info:
-    title: Image-Filter-Lab
-    description: A Java-based application for applying multiple filters to images
-  tags:
-  - image-filtering
-  - java
 - link: https://github.com/dougdomingos/dougdomingos
   info:
     title: dougdomingos
