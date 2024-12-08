@@ -7,9 +7,9 @@ permissions:
   contents: write
 
 on:
-  # This script runs at 00h00 every Sunday 
+  # This script runs at 00h00 every Sunday
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: "0 0 * * 0"
   workflow_dispatch:
 
 jobs:
@@ -23,13 +23,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-      
+          python-version: "3.10"
+
       - name: Install dependencies
         run: pip install pyyaml requests
 
       - name: Run script
         run: python ${{ env.SCRIPT_DIR }}/fetch_projects.py
-      
+
+      - name: Configure Actions bot as commit author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Commit changes to repository
         run: bash -x ${{ env.SCRIPT_DIR }}/commit-updated-list.sh
