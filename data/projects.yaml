@@ -1,18 +1,3 @@
-- link: https://github.com/dougdomingos/flashnotes
-  info:
-    title: flashnotes
-    description: Browser extension for easy note-taking while surfing the web
-  tags:
-  - browser-extension
-  - note-taking
-  - wxt
-- link: https://github.com/dougdomingos/image-filter-lab
-  info:
-    title: image-filter-lab
-    description: A Java-based application for applying multiple filters to images
-  tags:
-  - image-filtering
-  - java
 - link: https://github.com/dougdomingos/v2
   info:
     title: v2
@@ -21,6 +6,13 @@
   - blog
   - hugo-site
   - portfolio
+- link: https://github.com/dougdomingos/image-filter-lab
+  info:
+    title: image-filter-lab
+    description: A Java-based application for applying multiple filters to images
+  tags:
+  - image-filtering
+  - java
 - link: https://github.com/dougdomingos/dougdomingos
   info:
     title: dougdomingos
