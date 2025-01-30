@@ -7,24 +7,17 @@ readingTime = false
 
 {{< profile username="dougdomingos" >}}
 
-My name is Douglas Domingos. I'm a Computer Science undergraduate at Federal University of
-Campina Grande (UFCG), and currently working as IT Support and DevOps at Guardians UFCG.
+Undergraduate student in **Computer Science** at the **Federal University of Campina Grande
+(UFCG)**.
 
-At first, my interest in programming was simply to learn how to make games. I began studying
-Python through YouTube free courses. Since then, I've explored a ton of different
-technologies and fields of software development. Although I'm not sure of which career path
-to choose yet, I want to make our lifes easier and more fun through software.
+**I don't have a strong preference** for any particular field within Computer Science. **I simply
+enjoy solving problems**, regardless of the area or technologies involved. I prefer to **learn new
+tools & techniques through hands-on experience**, and I like to understand how things work down to
+the smallest details.
 
-## :rocket: My skills
+What began as a simple desire to create fun games has evolved into both my **profession and a
+personal pursuit**. Whether inside the office or during my free time, programming provides me with a
+**deep sense of fulfillment**.
 
-- **Frontend development**, with **React**, **Tailwind CSS**, and **Next.js**
-
-- **Backend development**, using **Node.js** and **Express**, and more recently **Spring Boot**
-
-- **Task automation** with **Python** and **Bash**
-
-## :pushpin: What I'm interested in
-
-- **Cybersecurity** and **Ethical Hacking**
-
-- **2D Game Development**
+Beyond the endless lines of code, I also have an interest in **Pixel Art** (despite being _really_
+bad at it, as of now), **indie games**, and of course, **coffee**.
