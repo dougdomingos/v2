@@ -1,0 +1,5 @@
+<a href="{{ .link }}" class="social-link" target="_blank">
+  {{ with resources.Get .icon }}
+  <img src="{{ .RelPermalink }}" alt="{{ $.alt }}" />
+  {{ end }}
+</a>

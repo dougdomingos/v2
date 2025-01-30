@@ -1,7 +1,7 @@
 div#profile img#github-photo {
-  border-radius: 9999px;
+  border-radius: 2rem;
   max-width: 250px;
-  margin: 0 auto;
+  margin: 1.5em auto;
 }
 
 div#profile div#socials {
@@ -10,6 +10,8 @@ div#profile div#socials {
   align-items: center;
 }
 
-div#profile div#socials img {
+div#profile div#socials a.social-link img {
+  width: 4rem;
+  margin: 0;
   border: none;
 }
