@@ -1,8 +1,10 @@
 - link: https://github.com/dougdomingos/ocr-playground
   info:
     title: ocr-playground
-    description: null
-  tags: []
+    description: Repository intended for experimenting with different OCR tools
+  tags:
+  - optical-character-recognition
+  - python
 - link: https://github.com/dougdomingos/v2
   info:
     title: v2
