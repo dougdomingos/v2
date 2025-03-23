@@ -1,3 +1,12 @@
+- link: https://github.com/dougdomingos/expense-tracker
+  info:
+    title: expense-tracker
+    description: REST API built with Spring Boot and JWT Authentication for finance
+      management
+  tags:
+  - jwt-auth
+  - spring-boot
+  - study-project
 - link: https://github.com/dougdomingos/ocr-playground
   info:
     title: ocr-playground
@@ -26,15 +35,6 @@
     description: Home repository for my GitHub profile
   tags:
   - readme-profile
-- link: https://github.com/dougdomingos/expense-tracker
-  info:
-    title: expense-tracker
-    description: REST API built with Spring Boot and JWT Authentication for finance
-      management
-  tags:
-  - jwt-auth
-  - spring-boot
-  - study-project
 - link: https://github.com/dougdomingos/portfolio-v1
   info:
     title: portfolio-v1
