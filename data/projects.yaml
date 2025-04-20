@@ -1,3 +1,10 @@
+- link: https://github.com/dougdomingos/image-filters
+  info:
+    title: image-filters
+    description: A Go library with a collection of image filter implementations
+  tags:
+  - golang-library
+  - image-processing
 - link: https://github.com/dougdomingos/v2
   info:
     title: v2
@@ -14,11 +21,6 @@
 - link: https://github.com/dougdomingos/ATAL-Template
   info:
     title: ATAL-Template
-    description: null
-  tags: []
-- link: https://github.com/dougdomingos/learning-go
-  info:
-    title: learning-go
     description: null
   tags: []
 - link: https://github.com/dougdomingos/expense-tracker
