@@ -1,3 +1,8 @@
+- link: https://github.com/dougdomingos/spacy-kickoff
+  info:
+    title: spacy-kickoff
+    description: null
+  tags: []
 - link: https://github.com/dougdomingos/v2
   info:
     title: v2
@@ -13,11 +18,6 @@
   tags:
   - golang-library
   - image-processing
-- link: https://github.com/dougdomingos/spacy-kickoff
-  info:
-    title: spacy-kickoff
-    description: null
-  tags: []
 - link: https://github.com/dougdomingos/expense-tracker
   info:
     title: expense-tracker
