@@ -1,8 +1,3 @@
-- link: https://github.com/dougdomingos/spacy-kickoff
-  info:
-    title: spacy-kickoff
-    description: null
-  tags: []
 - link: https://github.com/dougdomingos/v2
   info:
     title: v2
@@ -11,6 +6,11 @@
   - blog
   - hugo-site
   - portfolio
+- link: https://github.com/dougdomingos/spacy-kickoff
+  info:
+    title: spacy-kickoff
+    description: null
+  tags: []
 - link: https://github.com/dougdomingos/image-filters
   info:
     title: image-filters
