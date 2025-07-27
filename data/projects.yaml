@@ -1,3 +1,10 @@
+- link: https://github.com/dougdomingos/image-filters
+  info:
+    title: image-filters
+    description: A Go library with a collection of image filter implementations
+  tags:
+  - golang-library
+  - image-processing
 - link: https://github.com/dougdomingos/v2
   info:
     title: v2
@@ -6,13 +13,6 @@
   - blog
   - hugo-site
   - portfolio
-- link: https://github.com/dougdomingos/image-filters
-  info:
-    title: image-filters
-    description: A Go library with a collection of image filter implementations
-  tags:
-  - golang-library
-  - image-processing
 - link: https://github.com/dougdomingos/spacy-kickoff
   info:
     title: spacy-kickoff
