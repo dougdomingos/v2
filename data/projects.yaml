@@ -1,9 +1,11 @@
 - link: https://github.com/dougdomingos/image-filters
   info:
     title: image-filters
-    description: A Go library with a collection of image filter implementations
+    description: An image processing application written in pure Go, built for speed
+      and stability
   tags:
-  - golang-library
+  - convolutional-filters
+  - golang-application
   - image-processing
 - link: https://github.com/dougdomingos/v2
   info:
