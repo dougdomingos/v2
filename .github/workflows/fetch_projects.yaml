@@ -31,10 +31,8 @@ jobs:
       - name: Run script
         run: python ${{ env.SCRIPT_DIR }}/fetch_projects.py
 
-      - name: Configure Actions bot as commit author
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit changes to repository
-        run: bash -x ${{ env.SCRIPT_DIR }}/commit-updated-list.sh
+      - name: Upload project list as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: updated-repo-list
+          path: ./data/projects.yaml
