@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+  repo: dougdomingos/v2
+  branch: main
+
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: "posts"
+    label: "Postagens"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "data"
+    label: "Informações"
+    files:
+      - name: "experience"
+        label: "Experiência Profissional"
+        file: "src/content/data/experience.yml"
+        fields:
+          - name: "experiences"
+            label: "Lista de Experiências"
+            widget: "list"
+            fields:
+              - { label: "Cargo", name: "title", widget: "string" }
+              - { label: "Período", name: "period", widget: "string" }
+              - { label: "Atual?", name: "current", widget: "boolean", default: false }
+              - { label: "Empresa", name: "company", widget: "string" }
+              - { label: "Descrição", name: "description", widget: "text" }
+              - { label: "Tecnologias (Tags)", name: "tags", widget: "list" }
+        
+      - name: "projects"
+        label: "Projetos"
+        file: "src/content/data/projects.yml"
+        fields:
+          - name: "projects"
+            label: "Lista de Projetos"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descrição", name: "description", widget: "text" }
+              - { label: "Tecnologias (Tags)", name: "tags", widget: "list" }
+              - { label: "Link de acesso", name: "link", widget: "string", required: false }
+              - { label: "Imagem (URL)", name: "image", widget: "string", required: false }
+
+local_backend: true
