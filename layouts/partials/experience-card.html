@@ -1,0 +1,18 @@
+<div class="experience-card">
+  <div class="experience-card__header">  
+    <h3 class="experience-card__title">{{ .title }}</h3>
+    <span class="experience-card__company">{{ .company }}</span>
+  </div>
+  
+  <p class="experience-card__description">
+    {{ .description }}
+  </p>
+
+  {{ if .tags }}
+  <ul class="experience-card__tags">
+    {{ range .tags }}
+      <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>

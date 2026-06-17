@@ -14,7 +14,7 @@ enableEmoji = true
     contentTypeName = "posts"
 
     # if you set this to 0, only submenu trigger will be visible
-    showMenuItems = 3
+    showMenuItems = 4
 
     # show selector to switch language
     showLanguageSelector = false
@@ -51,7 +51,7 @@ enableEmoji = true
 [languages]
     [languages.en]
         languageName = "English"
-        title = "Douglas Domingos :: Computação@UFCG"
+        title = "Douglas Domingos :: CompSci@UFCG"
 
     [languages.en.params]
         subtitle = "Computer Science student at Federal University of Campina Grande (UFCG)"
@@ -70,20 +70,29 @@ enableEmoji = true
 
     [languages.en.params.logo]
         logoText = "@dougdomingos"
-        logoHomeLink = "/v2"
+        logoHomeLink = "/"
 
-    [languages.en.menu]
-        [[languages.en.menu.main]]
-            identifier = "posts"
-            name = "POSTS"
-            url = "/posts"
-        
+    [languages.en.menu]      
         [[languages.en.menu.main]]
             identifier = "about"
             name = "ABOUT"
             url = "/about"
+            weight = 1
+
+        [[languages.en.menu.main]]
+            identifier = "experiences"
+            name = "EXPERIENCES"
+            url = "/experiences"
+            weight = 2
 
         [[languages.en.menu.main]]
             identifier = "projects"
             name = "PROJECTS"
             url = "/projects"
+            weight = 3
+
+        [[languages.en.menu.main]]
+            identifier = "posts"
+            name = "POSTS"
+            url = "/posts"
+            weight = 4

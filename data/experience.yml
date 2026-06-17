@@ -1,0 +1,42 @@
+experiences:
+  - period: Dec 2025 – Present
+    current: true
+    title: Backend Developer
+    company: Laboratório de Computação Inteligente Aplicada (LACINA)
+    description: Development of a ERP multi-tenant solution on top of Frappe
+      Framework and ERPNext, implementing custom modules and integrating with
+      third-party services.
+    tags:
+      - Python
+      - Frappe Framework
+      - ERPNext
+      - Web Development
+
+  - period: Feb 2025 – Nov 2025
+    current: false
+    title: Software Engineer (R&D)
+    company: NuFuturo UFCG
+    description: Development of a web service for document analysis and information
+      extraction with Python and Clojure, integrating LLMs, OCR and natural
+      language processing techniques to enhance data processing capabilities, as
+      well as managing cloud infrastructure on AWS for scalable deployments.
+    tags:
+      - Python
+      - Clojure
+      - LangChain
+      - Large Language Models
+      - Optical Character Recognition
+      - Amazon Web Services
+
+  - period: Dec 2023 - Jan 2025
+    current: false
+    title: Linux System Administrator
+    company: Guardians UFCG
+    description: Mainentance of a custom Linux environment used for coding exams in
+      the university's computer labs, ensuring system stability and cheating
+      prevention.
+    tags:
+      - Linux
+      - System Administration
+      - Bash
+      - Shell Scripting

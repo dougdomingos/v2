@@ -1,0 +1,44 @@
+/* Container holding the entire timeline */
+.experience-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+/* 1. The vertical thread line */
+.experience-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 64px;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        var(--accent, #e2e8f0) 0%,
+        var(--accent, #e2e8f0) 90%,
+        var(--background, #ffffff) 100%
+    );
+    z-index: 1;
+}
+
+/* 2. Row layout */
+.timeline-row {
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* Keeps items aligned to the top */
+    gap: 2rem; /* Creates the gap between the timespan and the card */
+    z-index: 2;
+}
+
+/* 3. Timespan wrapper constraints */
+.timespan {
+    /* Give the timespan container a fixed width so the line can center behind it */
+    width: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
