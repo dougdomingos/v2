@@ -1,6 +1,6 @@
-{{ $projects := .Site.Data.projects }}
+{{ $data := .Site.Data.projects }}
 <div id="projects"> 
-  {{ range $projects }}
+  {{ range $data.projects }}
     {{ partial "project-card.html" . }}
   {{ end }}
 </div>

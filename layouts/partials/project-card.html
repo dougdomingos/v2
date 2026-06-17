@@ -1,8 +1,8 @@
-<a href="{{ .link }}">
+<a href="{{ .link | default "#" }}">
   <div class="project-card">
     <div class="project-card__info">
-      <span translate="no">{{ ":open_file_folder:" | emojify }} {{ .info.title }}</span>
-      <p>{{ .info.description }}</p>
+      <span translate="no">{{ ":open_file_folder:" | emojify }} {{ .title }}</span>
+      <p>{{ .description }}</p>
     </div>
     <div class="project-card__tags">
       {{ range .tags }} 

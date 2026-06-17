@@ -1,0 +1,37 @@
+projects:
+  - title: CaringHands
+    description: An web platform that allows families and caregivers to manage
+      medications and medical exams for their patients with much more simplicity
+      and convenience
+    tags:
+      - react
+      - tailwind-css
+      - spring-boot
+      - postgresql
+      - aws-ec2
+      - github-actions
+    image: /images/caring-hands.png
+
+  - title: Image Filters
+    description: An image processing application focused on performance, with
+      multiple filters (e.g., Binarization, Sobel, Gaussian Blur) implemented
+      using only built-in features of Go's standard library.
+    tags:
+      - go
+      - concurrent-programming
+      - pixel-manipulation
+      - study-project
+    link: https://github.com/dougdomingos/image-filters/
+
+  - title: Expense Tracker API
+    link: https://github.com/dougdomingos/expense-tracker
+    description:
+      REST API built with Spring Boot and JWT Authentication for finance
+      management
+    tags:
+      - spring-boot
+      - spring-security
+      - oauth2
+      - jwt-auth
+      - postgresql
+      - swagger-ui
