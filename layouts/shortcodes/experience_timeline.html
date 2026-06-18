@@ -2,7 +2,6 @@
 <div class="experience-timeline">
   {{ range $data.experiences }}
     <div class="timeline-row">
-      {{ partial "timespan.html" . }}
       {{ partial "experience-card.html" . }}
     </div>
   {{ end }}
