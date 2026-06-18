@@ -1,7 +1,5 @@
 baseurl = "https://dougdomingos.netlify.app/"
 languageCode = "en-us"
-# Add it only if you keep the theme in the `themes` directory.
-# Remove it if you use the theme as a remote Hugo Module.
 theme = "terminal"
 enableEmoji = true
 
@@ -96,3 +94,37 @@ enableEmoji = true
             name = "POSTS"
             url = "/posts"
             weight = 4
+
+[build]
+    command = "hugo --gc --minify"
+    publish = "public"
+
+[build.environment]
+    NODE_VERSION = "20"
+    HUGO_VERSION = "0.125.0"
+
+[[module.mounts]]
+    source = "assets"
+    target = "assets"
+
+[[module.mounts]]
+    source = "static"
+    target = "static"
+
+[[module.mounts]]
+    source = "node_modules/@fontsource/jetbrains-mono/files"
+    target = "static/fonts"
+    includeFiles = [
+        "jetbrains-mono-latin-400-normal.woff2",
+        "jetbrains-mono-latin-400-italic.woff2",
+        "jetbrains-mono-latin-700-normal.woff2"
+    ]
+
+[[module.mounts]]
+    source = "node_modules/@fontsource/source-serif-4/files"
+    target = "static/fonts"
+    includeFiles = [
+        "source-serif-4-latin-400-normal.woff2",
+        "source-serif-4-latin-400-italic.woff2",
+        "source-serif-4-latin-700-normal.woff2"
+    ]
