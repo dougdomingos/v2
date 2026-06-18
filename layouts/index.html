@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ if .Content }}
+    <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+  <div class="homepage">
+    {{ $posts := where .Site.RegularPages "Type" "posts" }}
+    {{ $recentPost := first 1 $posts }}
+    
+    {{ range $recentPost }}
+        {{ partial "highlighted-post.html" . }}
+    {{ end }}
+    
+    <section class="posts-by-tags">
+      {{ $posts := where .Site.RegularPages "Type" "posts" }}
+      {{ range $posts.GroupByDate "Jan 2006" }}
+        {{ partial "post-group.html" (dict "name" .Key "term" .) }}
+      {{ end }}
+    </section>
+  </div>
+{{ end }}
