@@ -3,18 +3,17 @@ experiences:
     current: true
     title: Backend Developer
     company: Laboratório de Computação Inteligente Aplicada (LACINA)
-    description: Development of a ERP multi-tenant solution on top of Frappe
-      Framework and ERPNext, implementing custom modules and integrating with
-      third-party services.
+    description: Development of an experimental, multi-tenant ERP solution, built on
+      top of Frappe Framework and ERPNext, implementing custom modules and
+      integrating with third-party services.
     tags:
       - Python
       - Frappe Framework
       - ERPNext
       - Web Development
-
   - period: Feb 2025 – Nov 2025
     current: false
-    title: Software Engineer (R&D)
+    title: Software Engineer Intern (R&D)
     company: NuFuturo UFCG
     description: Development of a web service for document analysis and information
       extraction with Python and Clojure, integrating LLMs, OCR and natural
@@ -27,7 +26,6 @@ experiences:
       - Large Language Models
       - Optical Character Recognition
       - Amazon Web Services
-
   - period: Dec 2023 - Jan 2025
     current: false
     title: Linux System Administrator
