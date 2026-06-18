@@ -1,14 +1,11 @@
-+++
-title = 'Installing software in Linux, the "hard" way'
-date = "2024-09-15T13:34:18-03:00"
-author = "Douglas Domingos"
-tags = ["linux", "tutorial", "sysadmin"]
-keywords = ["linux", "tutorial", "sysadmin"]
-description = "When package managers aren't enough for your needs, you might need to take matters into your own hands. And this is how you do it."
-showFullContent = false
-readingTime = true
-hideComments = false
-+++
+---
+title: 'Installing software in Linux, the "hard" way'
+date: "2024-09-15T13:34:18-03:00"
+author: "Douglas Domingos"
+tags: ["linux", "tutorial", "sysadmin"]
+keywords: ["linux", "tutorial", "sysadmin"]
+description: "When package managers aren't enough for your needs, you might need to take matters into your own hands. And this is how you do it."
+---
 
 ## Introduction
 
@@ -69,7 +66,7 @@ To make it avaliable in `$PATH`, we may **create a _symlink_ inside a directory 
 already in `$PATH`**. In this case, let's use the `/usr/local/bin` directory to store our
 _symlink_.
 
-To create our _symlink_, simply run the following command:
+To create our _symlink_, simply run the following comman:
 
 ```bash
 # Replace the placeholders with the proper names of your directories/files

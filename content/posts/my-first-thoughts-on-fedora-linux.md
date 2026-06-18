@@ -1,14 +1,14 @@
-+++
-title = "My First Thoughts on Fedora Linux"
-date = "2025-01-04T00:32:27-03:00"
-author = "Douglas Domingos"
-tags = ["linux", "opinion"]
-keywords = ["linux", "fedora", "ubuntu"]
-description = "After three years on Ubuntu-based distributions, I've decided to migrate to Fedora 41, for no reason besides pure curiosity. And so far, I have no plans of coming back."
-showFullContent = false
-readingTime = true
-hideComments = false
-+++
+---
+title: "My First Thoughts on Fedora Linux"
+date: "2025-01-04T00:32:27-03:00"
+author: "Douglas Domingos"
+tags: ["linux", "opinion"]
+keywords: ["linux", "fedora", "ubuntu"]
+description: "After three years on Ubuntu-based distributions, I've decided to migrate to Fedora 41, for no reason besides pure curiosity. And so far, I have no plans of coming back."
+showFullContent: false
+readingTime: true
+hideComments: false
+---
 
 ## Introduction
 

@@ -1,15 +1,21 @@
-+++
-title = "Creating a Multiboot USB Drive with Ventoy"
-date = "2024-11-20T18:49:01-03:00"
-author = "Douglas Domingos"
-tags = ["ventoy", "tutorial"]
-keywords = ["ventoy", "live-usb", "multiboot"]
-description = "Creating a multiboot USB can be as easy as dragging and dropping your ISO files from one directory to another. All that with only one tool, and the best part – it's open source!"
-showFullContent = false
-readingTime = true
-hideComments = false
-+++
-
+---
+keywords:
+  - ventoy
+  - live-usb
+  - multiboot
+author: Douglas Domingos
+showFullContent: false
+date: 2024-11-20T18:49:01-03:00
+hideComments: false
+title: Creating a Multiboot USB Drive with Ventoy
+tags:
+  - ventoy
+  - tutorial
+readingTime: true
+description: Creating a multiboot USB can be as easy as dragging and dropping
+  your ISO files from one directory to another. All that with only one tool, and
+  the best part – it's open source!
+---
 ## Introduction
 
 During a deploy of our custom Linux Mint images in one of the labs at UFCG, I've learned about
@@ -18,10 +24,8 @@ drives**. Of all the tools I've used for this task (like Rufus and Etcher), Vent
 interest for three reasons:
 
 1. **It does not require flashing the ISO** into the USB drive
-
 2. It allows you to **add multiple ISO files** to the USB drive, without tweaking with disk
    partitions
-
 3. It allows you to **choose which image to boot from at startup**
 
 Ventoy is also very easy to install and use, as **it provides packages with graphical interface**
@@ -32,10 +36,9 @@ to get our hands dirty anyways :yawning_face:
 
 While installing Ventoy on an USB drive, it will create two main partitions:
 
-- The EFI partition (formatted as `FAT`), where Ventoy's bootloader and configurations are stored,
+* The EFI partition (formatted as `FAT`), where Ventoy's bootloader and configurations are stored,
   and only 32MB in size
-
-- The main partition (usually formatted as `exFAT` or `FAT32`), where you can place your ISO files
+* The main partition (usually formatted as `exFAT` or `FAT32`), where you can place your ISO files
 
 When booting from the USB drive, **Ventoy's bootloader will look for ISO files** inside the main
 partition and **list them at the boot menu**. Please note that the disk layout may vary, depending
@@ -44,7 +47,7 @@ on whether you choose the [MBR](https://www.ventoy.net/en/doc_disk_layout.html) 
 
 ## Using Ventoy on Linux
 
-As mentioned before, we'll be installing Ventoy through CLI – like _real_ Linux users would. So,
+As mentioned before, we'll be installing Ventoy through CLI – like *real* Linux users would. So,
 you'll need to download the binary packages (e.g. `ventoy-1.0.XX-linux.tar.gz` file), which are
 avaliable at [SourceForge](https://sourceforge.net/projects/ventoy/files/). I recommend unpacking
 the tarball at `/opt` for convenience.
@@ -133,7 +136,7 @@ After the installation is complete, you can simply drag-and-drop your ISO files 
 partition, reboot your machine and boot from the USB drive. If you had no unpleasant surprises
 during installation, you should see the following screen:
 
-{{< picture src="/img/ventoy-iso-menu.png" alt="Ventoy initial screen" caption="Ventoy ISO Menu" >}}
+![Ventoy Menu screen](/images/ventoy-iso-menu.png "Ventoy Menu screen")
 
 From here, simply choose which ISO you wish to boot, and select the `Boot in normal mode` option.
 For more information about boot modes, read
@@ -153,7 +156,7 @@ Ventoy for the first time. Please follow these instructions in
 [Ventoy's documentation](https://www.ventoy.net/en/doc_secure.html) on how to allow Ventoy on Secure
 Boot.
 
-{{< picture src="/img/sb-first-boot.png" alt="Secure Boot error screenshot" caption="Secure Boot error due to Ventoy certificate not being recognized" >}}
+![Ventoy's Secure Boot prompt screen](/images/sb-first-boot.png "Ventoy's Secure Boot prompt screen")
 
 However, if you see **another error screen** while booting Ventoy, **your system may not support
 Ventoy on Secure Boot**. As such, you'll need to disable the option in your Ventoy installation and

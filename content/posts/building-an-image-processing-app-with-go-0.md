@@ -1,14 +1,11 @@
-+++
-title = "Building an Image Processing App With Go, #0"
-date = "2025-08-03T12:05:44-03:00"
-author = "Douglas Domingos"
-tags = ["parallelism", "image-processing", "go"]
-keywords = ["concurrent-programming", "image-processing", "go", "golang"]
-description = "How a CS50's problem set became one of the most interesting projects I've worked so far."
-showFullContent = false
-readingTime = true
-hideComments = false
-+++
+---
+title: "Building an Image Processing App With Go, #0"
+date: "2025-08-03T12:05:44-03:00"
+author: "Douglas Domingos"
+tags: ["parallelism", "image-processing", "go"]
+keywords: ["concurrent-programming", "image-processing", "go", "golang"]
+description: "How a CS50's problem set became one of the most interesting projects I've worked so far."
+---
 
 It's been quite a while since my last post. I've been meaning to write something new here for some
 time, but failed to find both an interesting topic and the patience to sit down and think about new
