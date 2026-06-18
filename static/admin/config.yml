@@ -6,13 +6,13 @@ backend:
   base_url: https://api.netlify.com
   auth_endpoint: auth
 
-media_folder: public/images
+media_folder: static/images
 public_folder: /images
 
 collections:
   - name: "posts"
     label: "Postagens"
-    folder: "src/content/posts"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     extension: "md"
@@ -30,7 +30,7 @@ collections:
     files:
       - name: "experience"
         label: "Experiência Profissional"
-        file: "src/content/data/experience.yml"
+        file: "data/experience.yml"
         fields:
           - name: "experiences"
             label: "Lista de Experiências"
@@ -45,7 +45,7 @@ collections:
         
       - name: "projects"
         label: "Projetos"
-        file: "src/content/data/projects.yml"
+        file: "data/projects.yml"
         fields:
           - name: "projects"
             label: "Lista de Projetos"
@@ -56,5 +56,3 @@ collections:
               - { label: "Tecnologias (Tags)", name: "tags", widget: "list" }
               - { label: "Link de acesso", name: "link", widget: "string", required: false }
               - { label: "Imagem (URL)", name: "image", widget: "string", required: false }
-
-local_backend: true
