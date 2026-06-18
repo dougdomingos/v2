@@ -1,13 +1,20 @@
-<a href="{{ .link | default "#" }}">
-  <div class="project-card">
-    <div class="project-card__info">
-      <span translate="no">{{ ":open_file_folder:" | emojify }} {{ .title }}</span>
-      <p>{{ .description }}</p>
-    </div>
-    <div class="project-card__tags">
-      {{ range .tags }} 
-      <span translate="no">#{{ . }}</span> 
-      {{ end }}
-    </div>
+<div class="project-card__body">
+  {{ if .image }}
+  <div class="project-card__banner-container">
+    <img class="project-card__banner" src="{{ .image | relURL }}" alt="{{ .title }} banner" loading="lazy">
   </div>
-</a>
+  {{ end }}
+  <div class="project-card__content">
+    <div class="project-card__info">
+      <span class="project-card__title" translate="no">
+        {{ .title }}
+      </span>
+      <p class="project-card__description">{{ .description }}</p>
+    </div>
+    <ul class="project-card__tags">
+      {{ range .tags }} 
+      <li class="project-card__tag" translate="no">#{{ . }}</li> 
+      {{ end }}
+    </ul>
+  </div>
+</div>

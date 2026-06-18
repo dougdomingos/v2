@@ -1,6 +1,14 @@
 {{ $data := .Site.Data.projects }}
 <div id="projects"> 
   {{ range $data.projects }}
-    {{ partial "project-card.html" . }}
+    {{ if .link }}
+      <a class="project-card project-card--clickable" href="{{ .link }}">
+        {{ partial "project-card.html" . }}
+      </a>
+    {{ else }}
+      <div class="project-card">
+        {{ partial "project-card.html" . }}
+      </div>
+    {{ end }}
   {{ end }}
 </div>
