@@ -1,127 +1,129 @@
 #projects {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .project-card a {
-    cursor: initial;
+  cursor: initial;
 }
 
 .project-card {
-    width: 100%;
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    box-sizing: border-box;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
 }
 
 .project-card--clickable {
-    cursor: pointer;
-    position: relative;
+  cursor: pointer;
+  position: relative;
 }
 
 .project-card--clickable::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid var(--accent);
-    border-radius: 0.5rem;
-    pointer-events: none;
-    opacity: 0;
-    transition:
-        transform 0.2s ease-out,
-        opacity 0.2s ease-out;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    transform 0.2s ease-out,
+    opacity 0.2s ease-out;
+  z-index: 1;
 }
 
 .project-card--clickable:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .project-card__body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-radius: 0.5rem;
-    background-color: color-mix(in srgb, var(--accent) 10%, var(--background));
-    box-sizing: border-box;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--accent) 10%, var(--background));
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .project-card__banner-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
 .project-card__banner {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 
-    max-width: 100% !important;
-    max-height: none !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    transform: none !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 .project-card__content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8em;
-    padding: 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  padding: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card__content * {
-    margin: 0;
+  margin: 0;
 }
 
 .project-card__info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
 }
 
 .project-card__title {
-    font-weight: bold;
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.25em;
 }
 
 .project-card__description {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    opacity: 0.9;
+  font-size: 1.1rem;
 }
 
 .project-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75em;
-    padding: 0;
-    list-style: none;
+  font-family: var(--font-mono);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 0;
+  list-style: none;
 }
 
 .project-card__tag {
-    display: block;
-    color: var(--accent);
-    background-color: color-mix(in srgb, var(--accent) 10%, transparent);
-    font-size: 0.9rem;
-    padding: 0.3em 0.9em;
-    border-radius: 10em;
+  display: block;
+  color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+  font-size: 0.85rem;
+  padding: 0.3em 0.9em;
+  border-radius: 10em;
 }
 
-.project-card__tags > .project-card__tag:not(:empty)::before {
-    content: "";
+.project-card__tags>.project-card__tag:not(:empty)::before {
+  content: "";
 }
