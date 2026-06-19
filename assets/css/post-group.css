@@ -1,58 +1,58 @@
 .post-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .post-group__summary {
-    display: flex;
-    font-size: 1.2rem;
-    font-weight: bold;
-    gap: 0.75em;
-    align-items: center;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  font-family: var(--font-mono);
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: bold;
+  gap: 0.5em;
+  align-items: center;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 /* Inserts the separating dot between the name and the post count */
-.post-group__summary > *:not(:first-child)::before {
-    content: "•";
-    color: var(--foreground);
-    opacity: 0.4;
-    margin-right: 0.5em;
+.post-group__summary>*:not(:first-child)::before {
+  content: "•";
+  color: var(--foreground);
+  opacity: 0.4;
 }
 
 .post-group__count {
-    color: var(--accent);
-    font-size: 1rem;
-    font-weight: normal;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .post-group__list {
-    list-style-type: disc;
-    padding-left: 1.2em;
-    margin-top: 0.9em;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  list-style-type: disc;
+  padding-left: 1.2em;
+  margin-top: 0.9em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .post-group__item {
-    display: list-item;
-    margin-bottom: 0.25em;
+  display: list-item;
+  margin-bottom: 0.25em;
 }
 
-.post-group__item > *:not(:first-child)::before {
-    content: "•";
-    color: var(--foreground);
-    opacity: 0.4;
-    margin-right: 0.5em;
+.post-group__item>*:not(:first-child)::before {
+  content: "•";
+  color: var(--foreground);
+  opacity: 0.4;
+  margin-right: 0.5em;
 }
 
 .post-group__link {
-    color: var(--foreground);
-    text-decoration: none;
+  color: var(--foreground);
+  text-decoration: none;
 }
 
 .post-group__link:hover {
-    color: var(--accent);
-    text-decoration: underline;
+  color: var(--accent);
+  text-decoration: underline;
 }

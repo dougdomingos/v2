@@ -1,0 +1,29 @@
+div.toolbar-item > button.copy-to-clipboard-button > span {
+  font-family: var(--font-mono);
+}
+
+div.content {
+  font-size: 1.15rem;
+}
+
+nav#TableOfContents, .post-meta, .post-tags {
+  font-family: var(--font-mono);
+}
+
+.post-content p, ul {
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+}
+
+.post-content :is(ul, ol) > li:not([class]):not(:first-child) {
+  margin-top: 0.5em;
+}
+
+.post-content * + :is(h2, h3) {
+  margin-top: 2em;
+}
+
+.post-content img {
+  width: 100%;
+  object-fit: cover;
+}

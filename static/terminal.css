@@ -6,8 +6,8 @@
   --font-size: 1rem;
   --line-height: 1.54em;
 
-  --heading-font: "JetBrains Mono", monospace;
-  --text-font: "Source Serif 4", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-serif: "Source Serif 4", serif;
 }
 
 html {
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  font-family: var(--text-font);
+  font-family: var(--font-serif);
   font-size: var(--font-size);
   font-weight: 400;
   line-height: var(--line-height);
@@ -38,11 +38,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
+    font-family: var(--font-mono);
 }
 
 header, footer {
-    font-family: var(--heading-font);    
+    font-family: var(--font-mono);    
 }
 
 h1 {
@@ -65,10 +65,6 @@ h5,
 h6 {
   font-size: calc(var(--font-size) * 1);
   letter-spacing: 0;
-}
-
-p {
-    font-size: 1.15rem;
 }
 
 h1, h2, h3, h4, h5, h6,
