@@ -1,22 +1,22 @@
 /* Timespan styling */
 .timespan {
-    font-family: var(--font-mono);
-    border: 0.2em solid var(--accent);
-    background-color: transparent;
-    border-radius: 10em;
-    font-size: 0.9rem;
-    padding: 0.5em 1.25em;
-    color: var(--accent);
-    display: inline-flex;
+  font-family: var(--font-mono);
+  border: 0.2em solid var(--accent);
+  background-color: transparent;
+  border-radius: 10em;
+  font-size: 0.9rem;
+  padding: 0.5em 1.25em;
+  color: var(--accent);
+  display: inline-flex;
 }
 
 .timespan.is-current {
-    border: transparent;
-    font-weight: bold;
-    background-color: color-mix(in srgb, var(--accent) 30%, transparent);
-    color: color-mix(in srgb, var(--accent) 50%, var(--foreground) 50%);
+  border: transparent;
+  font-weight: bold;
+  background-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: color-mix(in srgb, var(--accent) 50%, var(--foreground) 50%);
 }
 
 .timespan time {
-    text-align: center;
+  text-align: center;
 }

@@ -1,19 +1,19 @@
 <div class="experience-card">
   {{ partial "timespan.html" . }}
-  <div class="experience-card__header">  
+  <div class="experience-card__header">
     <h3 class="experience-card__title">{{ .title }}</h3>
     <span class="experience-card__company">{{ .company }}</span>
   </div>
-  
+
   <p class="experience-card__description">
     {{ .description }}
   </p>
 
   {{ if .tags }}
-  <ul class="experience-card__tags">
-    {{ range .tags }}
-      <li class="experience-card__tag">{{ . }}</li>
-    {{ end }}
-  </ul>
+    <ul class="experience-card__tags">
+      {{ range .tags }}
+        <li class="experience-card__tag">{{ . }}</li>
+      {{ end }}
+    </ul>
   {{ end }}
 </div>

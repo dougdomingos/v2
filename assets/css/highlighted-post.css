@@ -37,7 +37,7 @@
   opacity: 0.8;
 }
 
-.highlight-card__meta>*:not(:first-child)::before {
+.highlight-card__meta > *:not(:first-child)::before {
   content: "/";
   margin-right: 8px;
   color: var(--accent);

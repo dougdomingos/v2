@@ -4,11 +4,10 @@
   <img
     id="github-photo"
     src="https://github.com/{{ $username }}.png"
-    alt="GitHub profile picture"
-  />
+    alt="GitHub profile picture" />
   <div id="socials">
     {{ range $socials }}
       {{ partial "social-link.html" . }}
     {{ end }}
-  </div>  
+  </div>
 </div>

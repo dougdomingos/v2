@@ -6,11 +6,14 @@ div.content {
   font-size: 1.15rem;
 }
 
-nav#TableOfContents, .post-meta, .post-tags {
+nav#TableOfContents,
+.post-meta,
+.post-tags {
   font-family: var(--font-mono);
 }
 
-.post-content p, ul {
+.post-content p,
+ul {
   font-size: 1.15rem;
   line-height: 1.75rem;
 }

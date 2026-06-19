@@ -5,14 +5,16 @@
     </div>
   {{ end }}
 
+
   <div class="homepage">
     {{ $posts := where .Site.RegularPages "Type" "posts" }}
     {{ $recentPost := first 1 $posts }}
-    
+
     {{ range $recentPost }}
-        {{ partial "highlighted-post.html" . }}
+      {{ partial "highlighted-post.html" . }}
     {{ end }}
-    
+
+
     <section class="posts-by-tags">
       {{ $posts := where .Site.RegularPages "Type" "posts" }}
       {{ range $posts.GroupByDate "Jan 2006" }}

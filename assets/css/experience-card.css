@@ -1,48 +1,48 @@
 .experience-card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8em;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background-color: color-mix(in srgb, var(--accent) 10%, var(--background));
-    border-bottom: 2px solid var(--accent);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8em;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--accent) 10%, var(--background));
+  border-bottom: 2px solid var(--accent);
 }
 
 .experience-card * {
-    margin: 0;
+  margin: 0;
 }
 
 .experience-card__header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .experience-card__title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .experience-card__company {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .experience-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
 }
 
 .experience-card__tags li {
-    display: block;
-    color: var(--accent);
-    background-color: color-mix(in srgb, var(--accent) 10%, transparent);
-    font-size: 0.9rem;
-    padding: 0.3em 0.9em;
-    border-radius: 10em;
+  display: block;
+  color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+  font-size: 0.9rem;
+  padding: 0.3em 0.9em;
+  border-radius: 10em;
 }
 
 .experience-card > ul.experience-card__tags > li:not(:empty)::before {
-    content: "";
+  content: "";
 }

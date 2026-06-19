@@ -13,11 +13,11 @@
 }
 
 /* Inserts the separating dot between the name and the post count */
-.post-group__summary>*:not(:first-child)::before {
+.post-group__summary > *:not(:first-child)::before {
   content: "/";
   color: var(--foreground);
   opacity: 0.4;
-  margin-inline: .5em;
+  margin-inline: 0.5em;
 }
 
 .post-group__count {
@@ -40,7 +40,7 @@
   margin-bottom: 0.25em;
 }
 
-.post-group__item>*:not(:first-child)::before {
+.post-group__item > *:not(:first-child)::before {
   content: "•";
   color: var(--foreground);
   opacity: 0.4;

@@ -1,5 +1,5 @@
 {{ $data := .Site.Data.projects }}
-<div id="projects"> 
+<div id="projects">
   {{ range $data.projects }}
     {{ if .link }}
       <a class="project-card project-card--clickable" href="{{ .link }}">

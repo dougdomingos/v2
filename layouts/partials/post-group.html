@@ -2,12 +2,12 @@
   <summary class="post-group__summary">
     <span class="post-group__name">{{ .name | humanize }}</span>
     <span class="post-group__count">
-        {{ $count := len .term.Pages }}
-        {{ if eq $count 1 }}
-          1 post
-        {{ else }}
-          {{ $count }} posts
-        {{ end }}
+      {{ $count := len .term.Pages }}
+      {{ if eq $count 1 }}
+        1 post
+      {{ else }}
+        {{ $count }} posts
+      {{ end }}
     </span>
   </summary>
   <ul class="post-group__list">
