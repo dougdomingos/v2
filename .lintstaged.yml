@@ -1,0 +1,7 @@
+# Run Biome on staged files that have the following extensions: js, css
+"*.{js,css}":
+  - "biome check --write --no-errors-on-unmatched" # Format, sort imports, lint, and apply safe fixes
+
+# Run Prettier on staged files that have the following extensions: html, md
+"*.{html,md}":
+  - "prettier --write" # Only format

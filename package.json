@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "hugo serve --minify",
+    "format:templates": "prettier --write \"layouts/**/*.html\" \"content/**/*.md\" ",
+    "format:assets": "biome format --write .",
+    "format": "pnpm run format:assets && pnpm run format:templates"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +16,11 @@
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/source-serif-4": "^5.2.9"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.4",
+    "prettier-plugin-go-template": "^0.0.15"
   }
 }
