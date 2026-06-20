@@ -1,17 +1,51 @@
-div#profile img#github-photo {
-  border-radius: 2rem;
-  max-width: 250px;
-  margin: 1.5em auto;
-}
-
-div#profile div#socials {
+#profile {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  padding-inline: 1em;
 }
 
-div#profile div#socials a.social-link img {
-  width: 4rem;
-  margin: 0;
-  border: none;
+#profile #github-photo {
+  /* border: none; */
+  padding: 0;
+  border-radius: 0 2rem 0 2rem;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.profile__info {
+  flex-grow: 1;
+}
+
+.profile__info>.profile__info-badge:not(:first-child) {
+  margin-top: .5em;
+}
+
+.profile__info-badge {
+  font-family: var(--font-mono);
+  font-size: .95rem;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  gap: .5em;
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+  padding-right: .75em;
+  overflow: hidden;
+}
+
+.profile__badge-label {
+  background-color: var(--accent);
+  color: var(--background);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .25em .5em;
+  height: 100%;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+  }
 }

@@ -1,4 +1,4 @@
-div.toolbar-item > button.copy-to-clipboard-button > span {
+div.toolbar-item>button.copy-to-clipboard-button>span {
   font-family: var(--font-mono);
 }
 
@@ -18,15 +18,48 @@ ul {
   line-height: 1.75rem;
 }
 
-.post-content :is(ul, ol) > li:not([class]):not(:first-child) {
+.post-content :is(ul, ol)>li:not([class]):not(:first-child) {
   margin-top: 0.5em;
 }
 
-.post-content * + :is(h2, h3) {
+.post-content *+ :is(h2, h3) {
   margin-top: 2em;
 }
 
 .post-content img {
   width: 100%;
   object-fit: cover;
+}
+
+.footer {
+  border-top: 1px solid var(--accent);
+  opacity: 1;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.footer__socials {
+  display: flex;
+  gap: .75em;
+}
+
+.footer__socials svg {
+  margin: 0;
+  border: none;
+  width: 40px;
+  fill: var(--foreground);
+  transition: fill linear 150ms, transform ease-out 150ms;
+}
+
+.footer__socials svg:hover {
+  fill: var(--accent);
+  transform: scale(1.1);
+}
+
+.footer__inner .copyright {
+  opacity: 0.5;
 }

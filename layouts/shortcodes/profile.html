@@ -1,13 +1,18 @@
 {{ $username := .Get "username" }}
-{{ $socials := .Site.Data.socials }}
+{{ $data := .Site.Data.profile.me }}
 <div id="profile">
   <img
     id="github-photo"
     src="https://github.com/{{ $username }}.png"
+    width="250"
+    height="250"
     alt="GitHub profile picture" />
-  <div id="socials">
-    {{ range $socials }}
-      {{ partial "social-link.html" . }}
+  <div class="profile__info">
+    {{ range $data }}
+      <div class="profile__info-badge">
+        <span class="profile__badge-label">{{ .label }}</span>
+        <span>{{ .data }}</span>
+      </div>
     {{ end }}
   </div>
 </div>
