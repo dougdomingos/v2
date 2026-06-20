@@ -1,0 +1,21 @@
+{
+  "plugins": ["prettier-plugin-go-template"],
+  "overrides": [
+    {
+      "files": ["layouts/**/*.html"],
+      "options": {
+        "parser": "go-template",
+        "printWidth": 100,
+        "bracketSameLine": true,
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": ["content/**/*.md", "archetypes/**/*.md"],
+      "options": {
+        "parser": "markdown",
+        "proseWrap": "always" 
+      }
+    }
+  ]
+}

@@ -3,7 +3,9 @@
     <span class="highlight-card__badge">Latest Post</span>
     <div class="highlight-card__meta">
       {{- if and (.Param "readingTime") (eq (.Param "readingTime") true) -}}
-        <span class="highlight-card__reading-time">{{ .ReadingTime }} {{ $.Site.Params.minuteReadingTime | default "min read" }}</span>
+        <span class="highlight-card__reading-time"
+          >{{ .ReadingTime }} {{ $.Site.Params.minuteReadingTime | default "min read" }}</span
+        >
       {{- end -}}
       {{- if .Date -}}
         <time class="highlight-card__date">{{ .Date.Format "Jan 2006" }}</time>
@@ -18,10 +20,13 @@
   {{ if .Params.tags }}
     <div class="highlight-card__tags">
       {{ range first 3 .Params.tags }}
-        <a class="highlight-card__tag-link" href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">#{{ . }}</a>
+        <a class="highlight-card__tag-link" href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}"
+          >#{{ . }}</a
+        >
       {{ end }}
     </div>
   {{ end }}
+
 
   <div class="highlight-card__action">
     <a href="{{ .Permalink }}" class="highlight-card__cta">Read more →</a>

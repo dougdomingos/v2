@@ -1,0 +1,27 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__socials">
+      {{ $socials := .Site.Data.profile.socials }}
+      {{ range $socials }}
+        <a href="{{ .link }}" aria-label="{{ .label }}">
+          {{ partial (printf "svg/%s" .icon) . }}
+        </a>
+      {{ end }}
+    </div>
+    <div class="copyright">
+      <span>Powered by <a href="https://gohugo.io">Hugo</a></span>
+      <span
+        >:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by
+        <a href="https://github.com/panr" target="_blank">panr</a></span
+      >
+    </div>
+  </div>
+</footer>
+
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $prism := resources.Get "js/prism.js" | js.Build }}
+
+{{ $bundle := slice $menu $prism | resources.Concat "bundle.js" | resources.Minify }}
+
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>

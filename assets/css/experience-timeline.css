@@ -1,31 +1,31 @@
 /* Container holding the entire timeline */
 .experience-timeline {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding-bottom: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 .experience-timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 3rem;
-    width: 2px;
-    background: linear-gradient(
-        to bottom,
-        var(--accent, #e2e8f0) 0%,
-        var(--accent, #e2e8f0) 90%,
-        var(--background, #ffffff) 100%
-    );
-    z-index: 1; /* Keeps the line below the card content text */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3rem;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent, #e2e8f0) 0%,
+    var(--accent, #e2e8f0) 90%,
+    var(--background, #ffffff) 100%
+  );
+  z-index: 1; /* Keeps the line below the card content text */
 }
 
 /* 2. Row layout filling full width */
 .timeline-row {
-    position: relative;
-    width: 100%;
-    z-index: 2;
+  position: relative;
+  width: 100%;
+  z-index: 2;
 }

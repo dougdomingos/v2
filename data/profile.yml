@@ -1,0 +1,24 @@
+me:
+  - label: Name
+    data: Douglas Domingos
+
+  - label: Location
+    data: Campina Grande, PB - Brazil
+
+  - label: Education
+    data: B.Sc Candidate in Computer Science
+
+  - label: Skills
+    data: Frontend, Backend, DevOps, Cloud
+
+  - label: Interests
+    data: Game Development and Digital Art
+
+socials:
+  - link: https://www.linkedin.com/in/douglas-domingos/
+    icon: linkedin.svg
+    label: LinkedIn
+
+  - link: https://github.com/dougdomingos/
+    icon: github.svg
+    label: GitHub

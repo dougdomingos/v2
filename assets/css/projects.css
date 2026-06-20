@@ -124,6 +124,6 @@
   border-radius: 10em;
 }
 
-.project-card__tags>.project-card__tag:not(:empty)::before {
+.project-card__tags > .project-card__tag:not(:empty)::before {
   content: "";
 }

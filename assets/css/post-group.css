@@ -7,17 +7,17 @@
   display: flex;
   font-size: 1.2rem;
   font-weight: bold;
-  gap: 0.5em;
   align-items: center;
   padding-bottom: 0.5em;
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 /* Inserts the separating dot between the name and the post count */
-.post-group__summary>*:not(:first-child)::before {
-  content: "•";
+.post-group__summary > *:not(:first-child)::before {
+  content: "/";
   color: var(--foreground);
   opacity: 0.4;
+  margin-inline: 0.5em;
 }
 
 .post-group__count {
@@ -40,7 +40,7 @@
   margin-bottom: 0.25em;
 }
 
-.post-group__item>*:not(:first-child)::before {
+.post-group__item > *:not(:first-child)::before {
   content: "•";
   color: var(--foreground);
   opacity: 0.4;

@@ -1,8 +1,12 @@
 <div class="project-card__body">
   {{ if .image }}
-  <div class="project-card__banner-container">
-    <img class="project-card__banner" src="{{ .image | relURL }}" alt="{{ .title }} banner" loading="lazy">
-  </div>
+    <div class="project-card__banner-container">
+      <img
+        class="project-card__banner"
+        src="{{ .image | relURL }}"
+        alt="{{ .title }} banner"
+        loading="lazy" />
+    </div>
   {{ end }}
   <div class="project-card__content">
     <div class="project-card__info">
@@ -12,9 +16,7 @@
       <p class="project-card__description">{{ .description }}</p>
     </div>
     <ul class="project-card__tags">
-      {{ range .tags }} 
-      <li class="project-card__tag" translate="no">#{{ . }}</li> 
-      {{ end }}
+      {{ range .tags }}<li class="project-card__tag" translate="no">#{{ . }}</li>{{ end }}
     </ul>
   </div>
 </div>
